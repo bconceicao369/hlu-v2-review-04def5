@@ -1,16 +1,16 @@
 
 (function(){
   var PAGES=[
-    {f:'index.html',t:'⌂ Review Home'},
-    {f:'00-website.html',t:'1 · Website'},
-    {f:'01-registration.html',t:'2 · Registration'},
-    {f:'02-watch.html',t:'3 · Watch Page'},
-    {f:'03-sales.html',t:'4 · Sales Page'},
-    {f:'04-checkout.html',t:'5 · Checkout'},
-    {f:'05-post-purchase.html',t:'6 · Post-Purchase'},
-    {f:'06-application.html',t:'7 · Application'},
-    {f:'transcript.html',t:'▶ Transcript'},
-    {f:'emails.html',t:'✉ Email Sequence'}
+    {f:'index.html',t:'⌂ Review Home',g:''},
+    {f:'00-website.html',t:'Website (Home)',g:'V2 WEBSITE'},
+    {f:'01-registration.html',t:'1 · Registration',g:'V2 WEBINAR FUNNEL'},
+    {f:'02-watch.html',t:'2 · Watch Page',g:'V2 WEBINAR FUNNEL'},
+    {f:'03-sales.html',t:'3 · Sales Page',g:'V2 WEBINAR FUNNEL'},
+    {f:'04-checkout.html',t:'4 · Checkout',g:'V2 WEBINAR FUNNEL'},
+    {f:'05-post-purchase.html',t:'5 · Post-Purchase',g:'V2 WEBINAR FUNNEL'},
+    {f:'06-application.html',t:'6 · Application',g:'V2 WEBINAR FUNNEL'},
+    {f:'transcript.html',t:'Webinar Transcript',g:'MATERIALS'},
+    {f:'emails.html',t:'Email Sequence',g:'MATERIALS'}
   ];
   try{var mr=document.createElement('meta');mr.name='robots';mr.content='noindex,nofollow';document.head.appendChild(mr);}catch(e){}
   function base(p){p=p.split('?')[0].split('#')[0];var s=p.split('/');return s[s.length-1]||'index.html';}
@@ -20,21 +20,22 @@
     var t=document.getElementById('__rv_toast');
     if(!t){t=document.createElement('div');t.id='__rv_toast';document.body.appendChild(t);
       t.style.cssText='position:fixed;left:50%;bottom:64px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:8px;font:14px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;z-index:2147483647;box-shadow:0 4px 20px rgba(0,0,0,.35);max-width:90vw;text-align:center;opacity:0;transition:opacity .2s';}
-    t.textContent=msg;t.style.opacity='1';clearTimeout(t.__h);t.__h=setTimeout(function(){t.style.opacity='0';},2300);
+    t.textContent=msg;t.style.opacity='1';clearTimeout(t.__h);t.__h=setTimeout(function(){t.style.opacity='0';},2600);
   }
-  // Neutralize live buttons / links / forms (capture phase so page handlers never fire)
+  // Disable the funnel's OWN live buttons/forms, but allow the review's own nav (#__rv_bar or [data-rv-allow])
   document.addEventListener('click',function(e){
     if(e.target.closest('#__rv_bar'))return;
+    if(e.target.closest('[data-rv-allow]'))return;       // review home cards / back links / video links
     var el=e.target.closest('a,button,[role=button],input[type=submit],input[type=button],.cta,[onclick]');
     if(!el)return;
     var href=el.getAttribute&&el.getAttribute('href');
-    if(href&&href.charAt(0)==='#')return;            // allow in-page scroll anchors
+    if(href&&href.charAt(0)==='#')return;                // allow in-page scroll anchors
     e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();
-    toast('Preview only — this button is live in the real funnel');
+    toast('Preview — this button is disabled. Use the bar below (or Review Home) to move between pages.');
   },true);
   document.addEventListener('submit',function(e){
     e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();
-    toast('Preview only — forms are disabled in this review');
+    toast('Preview — forms are disabled in this review.');
   },true);
   try{window.open=function(){toast('Preview only');return null;};}catch(e){}
   function go(f){location.href=f;}
@@ -48,8 +49,11 @@
     var next=document.createElement('button');next.textContent='→';next.title='Next';
     [prev,next].forEach(function(b){b.style.cssText='background:#13315c;color:#fff;border:0;border-radius:6px;padding:6px 10px;cursor:pointer;font-size:14px';});
     var sel=document.createElement('select');
-    sel.style.cssText='flex:1;max-width:320px;background:#13315c;color:#fff;border:0;border-radius:6px;padding:6px 8px;cursor:pointer';
-    PAGES.forEach(function(p,i){var o=document.createElement('option');o.value=p.f;o.textContent=p.t;if(i===idx)o.selected=true;sel.appendChild(o);});
+    sel.style.cssText='flex:1;max-width:340px;background:#13315c;color:#fff;border:0;border-radius:6px;padding:6px 8px;cursor:pointer';
+    var oHome=document.createElement('option');oHome.value='index.html';oHome.textContent='⌂ Review Home';if(cur==='index.html')oHome.selected=true;sel.appendChild(oHome);
+    var groups={},order=[];
+    PAGES.forEach(function(p){if(p.f==='index.html')return;if(!groups[p.g]){groups[p.g]=[];order.push(p.g);}groups[p.g].push(p);});
+    order.forEach(function(g){var og=document.createElement('optgroup');og.label=g;groups[g].forEach(function(p){var o=document.createElement('option');o.value=p.f;o.textContent=p.t;if(p.f===cur)o.selected=true;og.appendChild(o);});sel.appendChild(og);});
     sel.addEventListener('change',function(){go(sel.value);});
     prev.addEventListener('click',function(){go(PAGES[Math.max(0,idx-1)].f);});
     next.addEventListener('click',function(){go(PAGES[Math.min(PAGES.length-1,idx+1)].f);});
