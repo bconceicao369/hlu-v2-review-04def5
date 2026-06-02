@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireLevel University — Break Into Medical Sales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #7B4FBA;
+      --purple-dark: #4E2580;
+      --purple-deep: #341460;
+      --purple-light: #CCBBDE;
+      --purple-soft: #9B72F6;
+      --near-black: #0F0B14;
+      --dark: #1C1432;
+      --card: #251A40;
+      --border: #3E2E60;
+      --white: #ffffff;
+      --off-white: #F2EFF6;
+      --muted: #AE9FC8;
+      --green: #86efac;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--near-black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,11,20,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { height: 58px; width: auto; }
+    .nav-wordmark { display: flex; flex-direction: column; line-height: 1.2; }
+    .nw-main { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: 0.01em; }
+    .nw-sub { font-family: 'Inter', sans-serif; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--purple-light); margin-top: 2px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--purple-light); }
+    .nav-cta {
+      background: var(--purple);
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--purple-dark) !important; color: #fff !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--near-black);
+      padding: 90px 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 40%, rgba(104,64,157,0.06) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 460px;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(104,64,157,0.15);
+      border: 1px solid rgba(104,64,157,0.4);
+      color: var(--purple-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 22px;
+    }
+    .hero h1 em { font-style: italic; color: var(--purple-light); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #D0C2E8;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--purple);
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--purple-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--purple-light);
+      padding: 15px 28px;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--purple-light); }
+
+    /* Hero visual */
+    .hero-visual { position: relative; }
+    .hero-img-wrap { position: relative; display: inline-block; width: 100%; }
+    .hero-img-wrap img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      filter: brightness(1.05) contrast(1.05);
+      display: block;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 24px;
+      left: -20px;
+      background: var(--purple-dark);
+      border: 1px solid rgba(104,64,157,0.5);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    }
+    .hero-badge strong { display: block; font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
+    .hero-badge-stat {
+      position: absolute;
+      top: 24px;
+      right: -20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    }
+    .hero-badge-stat .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--purple-light);
+      line-height: 1;
+    }
+    .hero-badge-stat .lbl { font-size: 0.68rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 40px;
+    }
+    .stats-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--purple-light);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+    /* ── SHARED SECTION ── */
+    section { padding: 80px 40px; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .container-sm { max-width: 760px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+    }
+    .section-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 580px; }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* ── FOR WHO ── */
+    .for-who { background: var(--dark); }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+    @media (max-width: 620px) { .who-grid { grid-template-columns: 1fr; } }
+    .who-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 26px;
+    }
+    .who-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 12px;
+    }
+    .who-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+    .who-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── CURRICULUM ── */
+    .curriculum { background: var(--near-black); }
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .module {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .module-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--purple);
+      opacity: 0.65;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 36px;
+    }
+    .module-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+    .module-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── RYAN / HOST ── */
+    .host-section { background: var(--dark); }
+    .host-inner {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    @media (max-width: 700px) { .host-inner { grid-template-columns: 1fr; } }
+    .host-img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      filter: brightness(1.05) contrast(1.05);
+    }
+    .host-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+    .host-title { font-size: 0.85rem; color: var(--purple-light); font-weight: 600; margin-bottom: 24px; }
+    .host-stats { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .host-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--purple-light);
+      line-height: 1;
+    }
+    .host-stat-label { font-size: 0.68rem; color: var(--muted); margin-top: 3px; }
+    .host-bio { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+    .host-bio p { margin-bottom: 14px; }
+    .host-bio p:last-child { margin-bottom: 0; }
+    .host-bio strong { color: var(--white); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--near-black); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .testi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    .testi-q { font-size: 2rem; color: var(--purple); font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
+    .testi-text { font-size: 0.9rem; color: #D5C9ED; line-height: 1.75; flex: 1; margin-bottom: 20px; }
+    .testi-author { font-weight: 700; font-size: 0.88rem; }
+    .testi-role { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+    .testi-result {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--green);
+      background: rgba(134,239,172,0.08);
+      border: 1px solid rgba(134,239,172,0.2);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .testi-watch {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--purple-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .testi-watch:hover { color: var(--purple-soft); }
+
+    /* ── EXIT INTERVIEWS ── */
+    .exit-interviews { background: var(--dark); }
+    .exit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .exit-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .exit-card:hover { transform: translateY(-3px); border-color: var(--purple); }
+    .exit-thumb {
+      position: relative;
+      background: var(--near-black);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .exit-play {
+      width: 56px; height: 56px;
+      background: var(--purple);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 16px rgba(123,79,186,0.4);
+    }
+    .exit-info { padding: 20px 24px; }
+    .exit-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .exit-role { font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
+    .exit-highlight {
+      font-size: 0.82rem;
+      color: #D5C9ED;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--dark); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+      align-items: start;
+    }
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: var(--purple);
+      background: var(--purple-deep);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--purple);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .price-tier { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple-light); margin-bottom: 8px; }
+    .price-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 6px; }
+    .price-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+    .price-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-og { font-size: 0.8rem; color: var(--muted); text-decoration: line-through; margin-bottom: 24px; }
+    .price-includes { margin-bottom: 24px; }
+    .price-includes-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 12px; }
+    .price-feature {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: #D5C9ED;
+      margin-bottom: 8px;
+    }
+    .price-feature::before { content: '✓'; color: var(--purple-light); font-weight: 700; flex-shrink: 0; }
+    .price-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+      border: none;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    .price-btn-primary { background: var(--purple); color: #fff; }
+    .price-btn-primary:hover { background: var(--purple-dark); }
+    .price-btn-outline { background: transparent; color: var(--purple-light); border: 1px solid var(--border); }
+    .price-btn-outline:hover { border-color: var(--purple-light); }
+    .guarantee-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 12px; }
+
+    /* ── GUARANTEE ── */
+    .guarantee { background: var(--near-black); }
+    .guarantee-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 48px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .guarantee-icon { font-size: 3rem; margin-bottom: 20px; }
+    .guarantee-inner h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; margin-bottom: 12px; }
+    .guarantee-inner p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--purple-dark);
+      text-align: center;
+      padding: 96px 40px;
+    }
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.2;
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .cta-section p { color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto 40px; font-size: 1rem; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--dark); }
+    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; max-width: 700px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .faq-q { padding: 18px 22px; font-weight: 600; font-size: 0.92rem; display: flex; justify-content: space-between; cursor: pointer; }
+    .faq-q::after { content: '+'; color: var(--purple-light); font-size: 1.1rem; }
+    .faq-a { padding: 0 22px 18px; font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--near-black);
+      border-top: 1px solid var(--border);
+      padding: 48px 40px 32px;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 640px) { .footer-inner { grid-template-columns: 1fr; } }
+    .footer-logo img { height: 40px; margin-bottom: 14px; }
+    .footer-tagline { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+    .footer-col-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 0.85rem; color: #9080A8; text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--purple-light); }
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.72rem;
+      color: #5E4E78;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTAwIiBmaWxsPSJub25lIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpZWxkR3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjN0I0QkI1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFFMEEzQyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGF1cmVsR3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjQzhCREUwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzlBOEJCNSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgoKICA8IS0tIFN0YXIgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIyMDAsMTggMjAzLjgsMjkuNSAyMTUuOSwyOS41IDIwNi4xLDM2LjUgMjA5LjgsNDggMjAwLDQxIDE5MC4yLDQ4IDE5My45LDM2LjUgMTg0LjEsMjkuNSAxOTYuMiwyOS41IgogICAgZmlsbD0iIzhCNUNGNiIgb3BhY2l0eT0iMC45Ii8+CgogIDwhLS0gU2hpZWxkIG91dGVyIGJvcmRlciAtLT4KICA8cGF0aCBkPSJNOTAsNTUgUTkwLDUyIDkzLDUyIEwzMDcsNTIgUTMxMCw1MiAzMTAsNTUgTDMxMCwyMDAgUTMxMCwyNzAgMjAwLDMxMCBROTAsMjcwIDkwLDIwMCBaIgogICAgZmlsbD0iIzNEMUY2RiIgc3Ryb2tlPSIjMkQxMTUwIiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgPCEtLSBTaGllbGQgaW5uZXIgdHJpbSAtLT4KICA8cGF0aCBkPSJNOTcsNjIgUTk3LDU5IDEwMCw1OSBMMzAwLDU5IFEzMDMsNTkgMzAzLDYyIEwzMDMsMTk4IFEzMDMsMjYzIDIwMCwzMDAgUTk3LDI2MyA5NywxOTggWiIKICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M4QkRFMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNSIvPgoKICA8IS0tIFNoaWVsZCBmaWxsIC0tPgogIDxwYXRoIGQ9Ik0xMDAsNjUgUTEwMCw2MiAxMDMsNjIgTDI5Nyw2MiBRMzAwLDYyIDMwMCw2NSBMMzAwLDE5OCBRMzAwLDI2MCAyMDAsMjk3IFExMDAsMjYwIDEwMCwxOTggWiIKICAgIGZpbGw9InVybCgjc2hpZWxkR3JhZCkiLz4KCiAgPCEtLSBHcmFkdWF0aW9uIGNhcCAtIGJvYXJkIC0tPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxMDUiIHJ4PSI0MiIgcnk9IjEwIiBmaWxsPSIjRjBFQUY4IiBvcGFjaXR5PSIwLjk1Ii8+CiAgPHJlY3QgeD0iMTkyIiB5PSI5OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjEyIiByeD0iMiIgZmlsbD0iI0U4RTBGNCIgb3BhY2l0eT0iMC45Ii8+CiAgPCEtLSBUYXNzZWwgLS0+CiAgPGxpbmUgeDE9IjI0MiIgeTE9IjEwNSIgeDI9IjI0MiIgeTI9IjEyMiIgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxjaXJjbGUgY3g9IjI0MiIgY3k9IjEyNCIgcj0iMyIgZmlsbD0iI0M4QkRFMCIvPgoKICA8IS0tIENhZHVjZXVzIHN0YWZmIC0tPgogIDxsaW5lIHgxPSIyMDAiIHkxPSIxMTgiIHgyPSIyMDAiIHkyPSIyMzAiIHN0cm9rZT0iI0U4RTBGNCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBXaW5ncyAtLT4KICA8cGF0aCBkPSJNMjAwLDEzMCBRMTcwLDExOCAxNDgsMTIyIFExNjUsMTI4IDE3MiwxMzggUTE4NSwxMzIgMjAwLDEzMFoiIGZpbGw9IiNENEM4RTgiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik0yMDAsMTMwIFEyMzAsMTE4IDI1MiwxMjIgUTIzNSwxMjggMjI4LDEzOCBRMjE1LDEzMiAyMDAsMTMwWiIgZmlsbD0iI0Q0QzhFOCIgb3BhY2l0eT0iMC45Ii8+CgogIDwhLS0gU25ha2UgbGVmdCAtLT4KICA8cGF0aCBkPSJNMTk4LDE0NSBRMTgwLDE1NSAxODMsMTY4IFExODYsMTgwIDE5OCwxODIgUTE4MCwxOTAgMTgzLDIwNSBRMTg2LDIxOCAxOTgsMjIwIgogICAgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTbmFrZSByaWdodCAtLT4KICA8cGF0aCBkPSJNMjAyLDE0NSBRMjIwLDE1NSAyMTcsMTY4IFEyMTQsMTgwIDIwMiwxODIgUTIyMCwxOTAgMjE3LDIwNSBRMjE0LDIxOCAyMDIsMjIwIgogICAgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CgogIDwhLS0gTGF1cmVsIGxlZnQgYnJhbmNoIC0tPgogIDxwYXRoIGQ9Ik05MCwyMzAgUTc1LDIxMCA3OCwxODUgUTgyLDE2NSA5MCwxNDgiIHN0cm9rZT0idXJsKCNsYXVyZWxHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8IS0tIExlZnQgbGVhdmVzIC0tPgogIDxlbGxpcHNlIGN4PSI4NSIgY3k9IjIyOCIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTIwLDg1LDIyOCkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4MCIgY3k9IjIxMyIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwLDgwLDIxMykiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI3NyIgY3k9IjE5NyIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQwLDc3LDE5NykiIGZpbGw9IiNDOEJERTAiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI3OCIgY3k9IjE4MSIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwLDc4LDE4MSkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4MiIgY3k9IjE2NiIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTYwLDgyLDE2NikiIGZpbGw9IiNDOEJERTAiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4OCIgY3k9IjE1MiIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTcwLDg4LDE1MikiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgoKICA8IS0tIExhdXJlbCByaWdodCBicmFuY2ggLS0+CiAgPHBhdGggZD0iTTMxMCwyMzAgUTMyNSwyMTAgMzIyLDE4NSBRMzE4LDE2NSAzMTAsMTQ4IiBzdHJva2U9InVybCgjbGF1cmVsR3JhZCkiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPCEtLSBSaWdodCBsZWF2ZXMgLS0+CiAgPGVsbGlwc2UgY3g9IjMxNSIgY3k9IjIyOCIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMjAsMzE1LDIyOCkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMjAiIGN5PSIyMTMiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDMwLDMyMCwyMTMpIiBmaWxsPSIjQjhBOUQ0IiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzIzIiBjeT0iMTk3IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg0MCwzMjMsMTk3KSIgZmlsbD0iI0M4QkRFMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjMyMiIgY3k9IjE4MSIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoNTAsMzIyLDE4MSkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMTgiIGN5PSIxNjYiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwLDMxOCwxNjYpIiBmaWxsPSIjQzhCREUwIiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzEyIiBjeT0iMTUyIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MCwzMTIsMTUyKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CgogIDwhLS0gSElSRUxFVkVMIHRleHQgLS0+CiAgPHRleHQgeD0iMjAwIiB5PSIzNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWYiCiAgICBmb250LXNpemU9IjQyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMyIKICAgIGZpbGw9IiNFOEUwRjQiPkhJUkVMRVZFTDwvdGV4dD4KCiAgPCEtLSBEZWNvcmF0aXZlIHJ1bGUgKyBSRVAgLS0+CiAgPGxpbmUgeDE9IjEwOCIgeTE9IjM3NSIgeDI9IjE2MyIgeTI9IjM3NSIgc3Ryb2tlPSIjOUE4QkI1IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjM3OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIKICAgIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSI4IiBmaWxsPSIjQjhBOUQ0Ij5SRVA8L3RleHQ+CiAgPGxpbmUgeDE9IjIzNyIgeTE9IjM3NSIgeDI9IjI5MiIgeTI9IjM3NSIgc3Ryb2tlPSIjOUE4QkI1IiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+Cg==" alt="HireLevel University" /><span class="nav-wordmark"><span class="nw-main">HireLevel</span><span class="nw-sub">University</span></span></a>
+  <ul class="nav-links">
+    <li><a href="#curriculum">Curriculum</a></li>
+    <li><a href="#about">About Ryan</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="/webinar.html" class="nav-cta">Watch Free Training →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span>🎓</span> Medical Sales Career Training
+      </div>
+      <h1>
+        Land a Career in Medical Sales<br />
+        <em>With No Prior Experience</em>
+      </h1>
+      <p class="hero-sub">
+        Our proven Interview-to-Offer™ system has helped hundreds of career changers 
+        and recent grads break into one of the highest-paying industries in healthcare —
+        average base salary $112,000+.
+      </p>
+      <div class="hero-actions">
+        <a href="/webinar.html" class="btn-primary">Watch Free Training →</a>
+        <a href="#pricing" class="btn-secondary">View Programs</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/17142108-b0db-417b-b925-489d6dc67ef3.png" alt="Ryan Conceicao — HireLevel University" />
+        <div class="hero-badge">
+          <strong>Ryan Conceicao</strong>
+          Founder · 11-Year Oncology Rep
+        </div>
+        <div class="hero-badge-stat">
+          <div class="num">94%</div>
+          <div class="lbl">Success<br/>Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-num">94%</div>
+      <div class="stat-label">Success Rate<br/>among program graduates</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$112k+</div>
+      <div class="stat-label">Average base salary<br/>in medical sales</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30 Days</div>
+      <div class="stat-label">Average time to<br/>first interview</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$30–60k</div>
+      <div class="stat-label">Average annual<br/>commissions</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOR WHO -->
+<section class="for-who" id="about-program">
+  <div class="container">
+    <p class="section-tag">Who This Is For</p>
+    <h2 class="section-title">You Want Into Medical Sales.<br />We'll Get You There.</h2>
+    <p class="section-sub">Most people are told they need years of sales experience before anyone will consider them. That's not true. Here's who we help:</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <p class="who-tag">Career Changers</p>
+        <h3>Coming from nursing, teaching, or another field?</h3>
+        <p>You've already got more than you think. Medical sales companies want people who can connect with physicians, communicate clearly, and stay organized. We'll show you how to reframe your experience so hiring managers see you as the obvious choice — not a long shot.</p>
+      </div>
+      <div class="who-card">
+        <p class="who-tag">Recent Graduates</p>
+        <h3>Just starting out and want to do it right?</h3>
+        <p>Medical sales is one of the few industries where you can earn six figures in year one without going back to school or spending $100K on more education. You just need the right positioning and the right system — not more time and debt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum" id="curriculum">
+  <div class="container">
+    <p class="section-tag">The Program</p>
+    <h2 class="section-title">The Interview-to-Offer™ System</h2>
+    <p class="section-sub">Seven proven modules that take you from zero to hired — built from 250+ real medical sales interviews.</p>
+    <div class="curriculum-grid">
+      <div class="module">
+        <div class="module-num">01</div>
+        <div>
+          <div class="module-title">The Resume</div>
+          <div class="module-desc">Build a resume that stands out to medical sales hiring managers — even without direct experience. Learn how to highlight transferable skills and quantify your impact.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">02</div>
+        <div>
+          <div class="module-title">How to Network</div>
+          <div class="module-desc">Master strategic LinkedIn outreach. Learn who to contact, exactly what to say, and how to build relationships that turn into interviews before you ever apply.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">03</div>
+        <div>
+          <div class="module-title">Landing an Interview</div>
+          <div class="module-desc">Turn applications into invitations. Learn how to target the right companies, work around gatekeepers, and get face-to-face meetings with decision-makers.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">04</div>
+        <div>
+          <div class="module-title">Nailing the Interview</div>
+          <div class="module-desc">The Core-4 Story Method™ — four strategic stories that answer 90% of interview questions, regardless of your background. Deliver them with confidence every time.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">05</div>
+        <div>
+          <div class="module-title">The Second Interview & Beyond</div>
+          <div class="module-desc">Navigate multi-round interviews with executives and hiring panels. Stay sharp through round two, three, and the final decision — and close the offer.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">06</div>
+        <div>
+          <div class="module-title">Types of Sales Reps</div>
+          <div class="module-desc">Understand the medical sales landscape — device, pharma, biotech, diagnostics. Know which roles align with your background and target your search strategically.</div>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">07</div>
+        <div>
+          <div class="module-title">Building a Business Plan</div>
+          <div class="module-desc">Build the 30/60/90 business plan that closes final-round interviews. Show hiring managers exactly how you'll attack the territory, ramp faster than the rep next to you, and prove you're already thinking like a top performer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RYAN -->
+<section class="host-section" id="about">
+  <div class="container">
+    <p class="section-tag">Your Coach</p>
+    <h2 class="section-title">Meet Ryan Conceicao</h2>
+    <div class="host-inner">
+      <img src="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/b51f2f2a-0736-4c77-925a-a69b19c7eff7.jpg" alt="Ryan Conceicao" class="host-img" />
+      <div>
+        <div class="host-name">Ryan Conceicao</div>
+        <div class="host-title">11-Year Oncology Medical Sales Rep · Founder, HireLevel University</div>
+        <div class="host-stats">
+          <div>
+            <div class="host-stat-num">11 yrs</div>
+            <div class="host-stat-label">In Medical Sales</div>
+          </div>
+          <div>
+            <div class="host-stat-num">250+</div>
+            <div class="host-stat-label">Interviews Studied</div>
+          </div>
+          <div>
+            <div class="host-stat-num">94%</div>
+            <div class="host-stat-label">Offer Rate</div>
+          </div>
+          <div>
+            <div class="host-stat-num">$53K→$185K+</div>
+            <div class="host-stat-label">Career Trajectory</div>
+          </div>
+        </div>
+        <div class="host-bio">
+          <p>Ryan started his career as a <strong>biology major working as a swim instructor</strong> — no sales background, no connections. He went on over <strong>100 interviews in four months</strong> just to learn the patterns, then built a repeatable system from what he discovered.</p>
+          <p>The insight that changed everything: <strong>the questions never change — only the person asking them does.</strong> That led to the Core-4 Story Method™, a framework that helped him land 94% of every role he went after.</p>
+          <p>He went from <strong>$53K to $185K+ base salary</strong> in his first 6 years — and well beyond that since, ultimately landing in oncology — one of the most coveted specialties in medical sales — in a role that required 7–10 years of experience he did not have. $185K was just the beginning. He got there because of how he interviewed.</p>
+          <p>Today he's coached <strong>hundreds of career changers and recent grads</strong> into medical sales — most landing their first role within 30 days of completing the program.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!-- VIDEO TESTIMONIAL WALL (V2) -->
+<style>
+  .vp-site { background: #fff; padding: 80px 24px; }
+  .vp-site .vt-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  @media (max-width: 980px) { .vp-site .vt-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+  @media (max-width: 540px) { .vp-site .vt-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+  .vp-site .vt-card { cursor: pointer; display: flex; flex-direction: column; transition: transform 0.18s; }
+  .vp-site .vt-card:hover { transform: translateY(-4px); }
+  .vp-site .vt-card:hover .vt-frame { box-shadow: 0 18px 36px rgba(104,64,157,0.28); }
+  .vp-site .vt-card:hover .vt-play { transform: scale(1.08); background: #68409D; color: #fff; }
+  .vp-site .vt-frame { position: relative; aspect-ratio: 9 / 16; border-radius: 14px; background-size: cover; background-position: center; overflow: hidden; box-shadow: 0 8px 22px rgba(13,11,18,0.18); transition: box-shadow 0.18s; }
+  .vp-site .vt-frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.45) 100%); pointer-events: none; }
+  .vp-site .vt-play { position: absolute; right: 10px; bottom: 10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.94); color: #68409D; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.3); padding-left: 3px; transition: transform 0.18s, background 0.18s, color 0.18s; z-index: 2; }
+  .vp-site .vt-card video { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; display: block; background: #000; }
+  .vp-site .vt-meta { padding: 12px 2px 0; text-align: left; }
+  .vp-site .vt-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 800; color: #0D0B12; line-height: 1.2; }
+  .vp-site .vt-role { font-size: 0.78rem; color: #6B6080; margin-top: 3px; }
+</style>
+<section class="vp-site" id="results">
+  <div class="container">
+    <div class="section-tag" style="text-align:center;">Student Results</div>
+    <h2 class="section-title" style="text-align:center;">Real People. Real Offers.</h2>
+    <div class="vt-grid">
+        <div class="vt-card" data-vsrc="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/6a0f9a366b8ea8a82747f16d.mov" data-vname="Garrett Cleavall">
+          <div class="vt-frame" style="background-image:url('https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/63cc3b05-c4ad-4878-9770-4b2d3679acf6.jpg');">
+            <button class="vt-play" type="button" aria-label="Play Garrett Cleavall's story">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="vt-meta">
+            <div class="vt-name">Garrett Cleavall</div>
+            <div class="vt-role">Healthcare → Med Sales</div>
+          </div>
+        </div>
+        <div class="vt-card" data-vsrc="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/6a0f9a363c3b60d8231be7e0.mov" data-vname="Haley Palmer">
+          <div class="vt-frame" style="background-image:url('https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/7ddd1e82-5cf9-4bf5-aad1-49b2d22c2391.jpg');">
+            <button class="vt-play" type="button" aria-label="Play Haley Palmer's story">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="vt-meta">
+            <div class="vt-name">Haley Palmer</div>
+            <div class="vt-role">College Athlete → Stryker (2 weeks)</div>
+          </div>
+        </div>
+        <div class="vt-card" data-vsrc="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/6a0f9a363de5ffb38f188e5a.mov" data-vname="Colleen">
+          <div class="vt-frame" style="background-image:url('https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/bb34f0e0-e34d-4763-90b0-56f0adda3c5e.jpg');">
+            <button class="vt-play" type="button" aria-label="Play Colleen's story">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="vt-meta">
+            <div class="vt-name">Colleen</div>
+            <div class="vt-role">Nurse Practitioner → 4 Offers</div>
+          </div>
+        </div>
+        <div class="vt-card" data-vsrc="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/6a0f9a362bd282d0820c6690.mov" data-vname="Arielle Rimoldi">
+          <div class="vt-frame" style="background-image:url('https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/f12495fe-862a-428f-8acd-36971077af80.jpg');">
+            <button class="vt-play" type="button" aria-label="Play Arielle Rimoldi's story">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="vt-meta">
+            <div class="vt-name">Arielle Rimoldi</div>
+            <div class="vt-role">Career-changer → Med Sales</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<script>
+  (function () {
+    document.querySelectorAll('.vp-site .vt-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        if (card.querySelector('video')) return;
+        var src = card.getAttribute('data-vsrc');
+        var name = card.getAttribute('data-vname') || '';
+        var v = document.createElement('video');
+        v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true;
+        v.setAttribute('playsinline','');
+        v.preload = 'metadata';
+        v.setAttribute('aria-label', name + ' testimonial');
+        var frame = card.querySelector('.vt-frame');
+        frame.innerHTML = ''; frame.style.background = '#000';
+        frame.appendChild(v);
+        v.addEventListener('play', function () {
+          document.querySelectorAll('.vp-site video').forEach(function (other) {
+            if (other !== v) other.pause();
+          });
+        });
+      });
+    });
+  })();
+</script>
+
+<!-- EXIT INTERVIEWS -->
+<section class="exit-interviews" id="exit-interviews">
+  <div class="container">
+    <p class="section-tag">Exit Interviews</p>
+    <h2 class="section-title">Hear Their Stories — In Their Own Words</h2>
+    <p class="section-sub" style="margin-bottom: 8px;">Every student who completes the program sits down for an unscripted exit interview. No scripts. No edits. Just real results.</p>
+    <div class="exit-grid">
+
+      <div class="exit-card">
+        <div class="exit-thumb">
+          <div class="exit-play">▶</div>
+          <div style="font-size:0.72rem; color:var(--muted);">Full Exit Interview</div>
+        </div>
+        <div class="exit-info">
+          <div class="exit-name">Haley Palmer</div>
+          <div class="exit-role">College Athlete → Stryker · Hired in 2 Weeks &amp; 1 Day</div>
+          <p class="exit-highlight">"I quit my job on a Monday. Two weeks and a day later, I had a job offer at Stryker. The commitment is what got me there."</p>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-thumb">
+          <div class="exit-play">▶</div>
+          <div style="font-size:0.72rem; color:var(--muted);">Full Exit Interview</div>
+        </div>
+        <div class="exit-info">
+          <div class="exit-name">Colleen S.</div>
+          <div class="exit-role">Nurse Practitioner · Landed 4 Offers Including $200K+ Package</div>
+          <p class="exit-highlight">"If you want to get into pharma successfully and you want to be prepared, there is no other way. You need a program."</p>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-thumb">
+          <div class="exit-play">▶</div>
+          <div style="font-size:0.72rem; color:var(--muted);">Full Exit Interview</div>
+        </div>
+        <div class="exit-info">
+          <div class="exit-name">Matt Bennett</div>
+          <div class="exit-role">20-Year Bedside Nurse → Medical Sales Rep</div>
+          <p class="exit-highlight">"Every day I sell my trust to the patients and the physicians. And I didn't even notice that until we started working together."</p>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-thumb">
+          <div class="exit-play">▶</div>
+          <div style="font-size:0.72rem; color:var(--muted);">Full Exit Interview</div>
+        </div>
+        <div class="exit-info">
+          <div class="exit-name">Olivia Frederick</div>
+          <div class="exit-role">Dental Hygienist → Pharmaceutical Sales · $93K → $100K+ Base</div>
+          <p class="exit-highlight">"Looking back on my transition into sales with all the coaching I had, it was so doable. The learning curve was way easier than becoming a hygienist."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 48px;">
+      <p class="section-tag">Choose Your Path</p>
+      <h2 class="section-title">Invest in the Career That Pays for Itself</h2>
+      <p class="section-sub">All programs include the full Interview-to-Offer™ course, bi-weekly Q&amp;A calls, and 9 career-accelerating bonuses. 30-day money-back guarantee.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- Tier 1 -->
+      <div class="price-card">
+        <div class="price-tier">Core Program</div>
+        <div class="price-name">Interview-to-Offer™</div>
+        <div class="price-desc">The complete system for breaking into medical sales — course, calls, and all bonuses included.</div>
+        <div class="price-amount">$1,197</div>
+        <div class="price-og">Total value: $9,639</div>
+        <div class="price-includes">
+          <div class="price-includes-title">What's included</div>
+          <div class="price-feature">Full video course (7 modules)</div>
+          <div class="price-feature">Bi-weekly Q&A calls with Ryan</div>
+          <div class="price-feature">Brag Book template</div>
+          <div class="price-feature">30/60/90 Day Plan Framework</div>
+          <div class="price-feature">Mock Product Scenarios</div>
+          <div class="price-feature">Medical Sales Textbook</div>
+          <div class="price-feature">+ 4 more bonus resources</div>
+        </div>
+        <a href="[ INSERT CHECKOUT LINK ]" class="price-btn price-btn-outline">Enroll — $1,197</a>
+        <p class="guarantee-note">Or 4 monthly payments of $357/mo · 30-day guarantee</p>
+      </div>
+
+      <!-- Tier 2 — Featured -->
+      <div class="price-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="price-tier">Core + Resume</div>
+        <div class="price-name">Interview-to-Offer™ + Resume Service</div>
+        <div class="price-desc">Everything in the core program, plus a $1,697-value professional resume package from our career services partner — custom resume, cover letter, intake call, and career management access.</div>
+        <div class="price-amount">$2,497</div>
+        <div class="price-og">Total value: $11,336</div>
+        <div class="price-includes">
+          <div class="price-includes-title">Everything in Core, plus</div>
+          <div class="price-feature">Professional Resume Package ($1,697 value from our career services partner)</div>
+          <div class="price-feature">Custom Tailored Resume + Story-Driven Cover Letter</div>
+          <div class="price-feature">Intake Interview Call</div>
+          <div class="price-feature">Access to Career Management Program</div>
+        </div>
+        <a href="[ INSERT CHECKOUT LINK ]" class="price-btn price-btn-primary">Enroll — $2,497</a>
+        <p class="guarantee-note">Or 4 monthly payments of $731/mo · 30-day guarantee</p>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="price-card">
+        <div class="price-tier">Elite · 2 Spots Only</div>
+        <div class="price-name">Interview-to-Offer™ + 1-on-1 Coaching</div>
+        <div class="price-desc">The full program plus unlimited 1-on-1 sessions with Ryan — pre-interview prep, strategy reviews, and direct support until you land.</div>
+        <div class="price-amount">$4,871</div>
+        <div class="price-og">Total value: $16,029</div>
+        <div class="price-includes">
+          <div class="price-includes-title">Everything in Core + Resume, plus</div>
+          <div class="price-feature">Unlimited 1-on-1 coaching with Ryan</div>
+          <div class="price-feature">Pre and post-interview check-ins</div>
+          <div class="price-feature">Role-play and scenario practice</div>
+          <div class="price-feature">Direct strategy support until hired</div>
+        </div>
+        <a href="[ INSERT CHECKOUT LINK ]" class="price-btn price-btn-outline">Apply for Coaching</a>
+        <p class="guarantee-note">Only 2 spots per cohort · 4 payments of $1,450/mo available · 30-day guarantee</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="container">
+    <div class="guarantee-inner">
+      <div class="guarantee-icon">🛡️</div>
+      <h3>30-Day Money-Back Guarantee</h3>
+      <p>If you complete the program and don't feel it was worth every penny, contact us within 30 days for a full refund. No questions asked. We're confident this works — because we've seen it work hundreds of times.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Start Your Journey Into Medical Sales Today</h2>
+  <p>Watch the free 60-minute training and see exactly how the Interview-to-Offer™ system works — before you spend a dime.</p>
+  <a href="/webinar.html" class="btn-primary" style="font-size:1.05rem; padding: 17px 40px;">Watch the Free Training →</a>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <p class="section-tag">Questions</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need sales experience to enroll?</div>
+        <div class="faq-a">No. The program was specifically built for people without traditional sales backgrounds. Ryan started as a swim instructor. Haley had no sales experience. The system works by reframing who you are — not faking experience you don't have.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the program take?</div>
+        <div class="faq-a">The video content can be completed in a weekend. Most students start applying the system within 1–2 weeks and see interviews coming in within 30 days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How many students are in each cohort?</div>
+        <div class="faq-a">We cap Core and Resume cohorts at 30 students. Elite 1-on-1 coaching is limited to 2 students per cohort to ensure quality.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between the tiers?</div>
+        <div class="faq-a">The Core program gives you the full system and all bonuses. The Resume tier adds a professionally written, medical-sales-specific resume. The Elite tier adds unlimited direct access to Ryan until you land a role.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a guarantee?</div>
+        <div class="faq-a">Yes — 30-day money-back guarantee on all programs. If you complete the coursework and aren't satisfied, we'll refund you in full, no questions asked.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Not sure which program is right for me?</div>
+        <div class="faq-a">Start with the free training. Ryan walks you through the full system and at the end you'll have a clear sense of which level of support makes the most sense for your situation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTAwIiBmaWxsPSJub25lIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpZWxkR3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjN0I0QkI1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFFMEEzQyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGF1cmVsR3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjQzhCREUwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzlBOEJCNSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgoKICA8IS0tIFN0YXIgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIyMDAsMTggMjAzLjgsMjkuNSAyMTUuOSwyOS41IDIwNi4xLDM2LjUgMjA5LjgsNDggMjAwLDQxIDE5MC4yLDQ4IDE5My45LDM2LjUgMTg0LjEsMjkuNSAxOTYuMiwyOS41IgogICAgZmlsbD0iIzhCNUNGNiIgb3BhY2l0eT0iMC45Ii8+CgogIDwhLS0gU2hpZWxkIG91dGVyIGJvcmRlciAtLT4KICA8cGF0aCBkPSJNOTAsNTUgUTkwLDUyIDkzLDUyIEwzMDcsNTIgUTMxMCw1MiAzMTAsNTUgTDMxMCwyMDAgUTMxMCwyNzAgMjAwLDMxMCBROTAsMjcwIDkwLDIwMCBaIgogICAgZmlsbD0iIzNEMUY2RiIgc3Ryb2tlPSIjMkQxMTUwIiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgPCEtLSBTaGllbGQgaW5uZXIgdHJpbSAtLT4KICA8cGF0aCBkPSJNOTcsNjIgUTk3LDU5IDEwMCw1OSBMMzAwLDU5IFEzMDMsNTkgMzAzLDYyIEwzMDMsMTk4IFEzMDMsMjYzIDIwMCwzMDAgUTk3LDI2MyA5NywxOTggWiIKICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M4QkRFMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNSIvPgoKICA8IS0tIFNoaWVsZCBmaWxsIC0tPgogIDxwYXRoIGQ9Ik0xMDAsNjUgUTEwMCw2MiAxMDMsNjIgTDI5Nyw2MiBRMzAwLDYyIDMwMCw2NSBMMzAwLDE5OCBRMzAwLDI2MCAyMDAsMjk3IFExMDAsMjYwIDEwMCwxOTggWiIKICAgIGZpbGw9InVybCgjc2hpZWxkR3JhZCkiLz4KCiAgPCEtLSBHcmFkdWF0aW9uIGNhcCAtIGJvYXJkIC0tPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxMDUiIHJ4PSI0MiIgcnk9IjEwIiBmaWxsPSIjRjBFQUY4IiBvcGFjaXR5PSIwLjk1Ii8+CiAgPHJlY3QgeD0iMTkyIiB5PSI5OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjEyIiByeD0iMiIgZmlsbD0iI0U4RTBGNCIgb3BhY2l0eT0iMC45Ii8+CiAgPCEtLSBUYXNzZWwgLS0+CiAgPGxpbmUgeDE9IjI0MiIgeTE9IjEwNSIgeDI9IjI0MiIgeTI9IjEyMiIgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxjaXJjbGUgY3g9IjI0MiIgY3k9IjEyNCIgcj0iMyIgZmlsbD0iI0M4QkRFMCIvPgoKICA8IS0tIENhZHVjZXVzIHN0YWZmIC0tPgogIDxsaW5lIHgxPSIyMDAiIHkxPSIxMTgiIHgyPSIyMDAiIHkyPSIyMzAiIHN0cm9rZT0iI0U4RTBGNCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBXaW5ncyAtLT4KICA8cGF0aCBkPSJNMjAwLDEzMCBRMTcwLDExOCAxNDgsMTIyIFExNjUsMTI4IDE3MiwxMzggUTE4NSwxMzIgMjAwLDEzMFoiIGZpbGw9IiNENEM4RTgiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik0yMDAsMTMwIFEyMzAsMTE4IDI1MiwxMjIgUTIzNSwxMjggMjI4LDEzOCBRMjE1LDEzMiAyMDAsMTMwWiIgZmlsbD0iI0Q0QzhFOCIgb3BhY2l0eT0iMC45Ii8+CgogIDwhLS0gU25ha2UgbGVmdCAtLT4KICA8cGF0aCBkPSJNMTk4LDE0NSBRMTgwLDE1NSAxODMsMTY4IFExODYsMTgwIDE5OCwxODIgUTE4MCwxOTAgMTgzLDIwNSBRMTg2LDIxOCAxOTgsMjIwIgogICAgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTbmFrZSByaWdodCAtLT4KICA8cGF0aCBkPSJNMjAyLDE0NSBRMjIwLDE1NSAyMTcsMTY4IFEyMTQsMTgwIDIwMiwxODIgUTIyMCwxOTAgMjE3LDIwNSBRMjE0LDIxOCAyMDIsMjIwIgogICAgc3Ryb2tlPSIjRDRDOEU4IiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CgogIDwhLS0gTGF1cmVsIGxlZnQgYnJhbmNoIC0tPgogIDxwYXRoIGQ9Ik05MCwyMzAgUTc1LDIxMCA3OCwxODUgUTgyLDE2NSA5MCwxNDgiIHN0cm9rZT0idXJsKCNsYXVyZWxHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8IS0tIExlZnQgbGVhdmVzIC0tPgogIDxlbGxpcHNlIGN4PSI4NSIgY3k9IjIyOCIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTIwLDg1LDIyOCkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4MCIgY3k9IjIxMyIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwLDgwLDIxMykiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI3NyIgY3k9IjE5NyIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQwLDc3LDE5NykiIGZpbGw9IiNDOEJERTAiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI3OCIgY3k9IjE4MSIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwLDc4LDE4MSkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4MiIgY3k9IjE2NiIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTYwLDgyLDE2NikiIGZpbGw9IiNDOEJERTAiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSI4OCIgY3k9IjE1MiIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTcwLDg4LDE1MikiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgoKICA8IS0tIExhdXJlbCByaWdodCBicmFuY2ggLS0+CiAgPHBhdGggZD0iTTMxMCwyMzAgUTMyNSwyMTAgMzIyLDE4NSBRMzE4LDE2NSAzMTAsMTQ4IiBzdHJva2U9InVybCgjbGF1cmVsR3JhZCkiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPCEtLSBSaWdodCBsZWF2ZXMgLS0+CiAgPGVsbGlwc2UgY3g9IjMxNSIgY3k9IjIyOCIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMjAsMzE1LDIyOCkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMjAiIGN5PSIyMTMiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDMwLDMyMCwyMTMpIiBmaWxsPSIjQjhBOUQ0IiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzIzIiBjeT0iMTk3IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg0MCwzMjMsMTk3KSIgZmlsbD0iI0M4QkRFMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjMyMiIgY3k9IjE4MSIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoNTAsMzIyLDE4MSkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMTgiIGN5PSIxNjYiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwLDMxOCwxNjYpIiBmaWxsPSIjQzhCREUwIiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzEyIiBjeT0iMTUyIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MCwzMTIsMTUyKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CgogIDwhLS0gSElSRUxFVkVMIHRleHQgLS0+CiAgPHRleHQgeD0iMjAwIiB5PSIzNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWYiCiAgICBmb250LXNpemU9IjQyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMyIKICAgIGZpbGw9IiNFOEUwRjQiPkhJUkVMRVZFTDwvdGV4dD4KCiAgPCEtLSBEZWNvcmF0aXZlIHJ1bGUgKyBSRVAgLS0+CiAgPGxpbmUgeDE9IjEwOCIgeTE9IjM3NSIgeDI9IjE2MyIgeTI9IjM3NSIgc3Ryb2tlPSIjOUE4QkI1IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjM3OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIKICAgIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSI4IiBmaWxsPSIjQjhBOUQ0Ij5SRVA8L3RleHQ+CiAgPGxpbmUgeDE9IjIzNyIgeTE9IjM3NSIgeDI9IjI5MiIgeTI9IjM3NSIgc3Ryb2tlPSIjOUE4QkI1IiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+Cg==" alt="HireLevel University" /></div>
+      <p class="footer-tagline">Helping career changers and recent grads break into medical sales — without the detours.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Program</div>
+      <ul class="footer-links">
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#results">Student Results</a></li>
+        <li><a href="/webinar.html">Free Training</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Ryan</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 HireLevel University. All Rights Reserved.</span>
+    <span>Results may vary. Individual outcomes depend on effort and commitment.</span>
+  </div>
+</footer>
+
+<script src="review-nav.js" defer></script></body>
+</html>
