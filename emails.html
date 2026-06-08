@@ -1,362 +1,447 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Email Sequence — HireLevel V2</title><style>
-:root{--navy:#0b1f3a;--blue:#13315c;--ink:#1c2733}
-*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px}
-h1{font-size:26px;margin:0 0 4px;color:var(--navy)}.sub{color:#5b6b7c;margin:0 0 24px}
-.note{background:#fff;border:1px solid #e3e8ef;border-left:4px solid var(--blue);border-radius:8px;padding:12px 16px;margin:0 0 24px;font-size:14px}
-.note,.note *{color:#415061}
-.ts{display:inline-block;min-width:50px;color:#8a98a8;font:600 12px ui-monospace,Menlo,monospace;margin-right:10px;vertical-align:1px}
-p{margin:0 0 14px}a{color:var(--blue)}
-.back{display:inline-block;margin-bottom:18px;color:var(--blue);text-decoration:none;font-weight:600}
-</style><style>
-.email{background:#fff;border:1px solid #e3e8ef;border-radius:12px;margin:0 0 18px;overflow:hidden}
-.ehead{display:flex;gap:10px;align-items:center;background:#0b1f3a;color:#fff;padding:9px 16px}
-.eno{font-weight:800;font-size:13px;letter-spacing:.03em}.eday{font-size:12px;opacity:.75;border-left:1px solid #ffffff33;padding-left:10px}
-.esubj{font-weight:700;color:#0b1f3a;padding:12px 16px 0;font-size:16px}
-.ebody{padding:4px 16px 14px;color:#28323d}.ebody p{margin:0 0 10px}.ebody a{color:#13315c;word-break:break-all}
-.ebody h3{color:#13315c;font-size:15px;margin:14px 0 6px}code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:13px}
-.egroup{font:800 13px -apple-system;letter-spacing:.04em;text-transform:uppercase;color:#0b1f3a;margin:26px 0 4px;border-top:2px solid #e3e8ef;padding-top:16px}
-.egd{font-size:13px;color:#5b6b7c;margin:0 0 12px}
-</style></head><body><div class="wrap"><a class="back" data-rv-allow href="index.html">← Review Home</a><h1>Webinar Email Sequence</h1><p class="sub">The full sequence a registrant receives after opting in on the webinar page</p><div class="note">10 emails total. The <b>first 5 fire on registration</b> (Days 0–5). The <b>next 5 fire after they watch</b> (Days 6–10) if they haven't enrolled. Tier 2 (Core + Resume) is the primary offer; Email 8.5 is the Tier 1 downsell.</div><div class="egroup">① On registration · Days 0–5</div><p class="egd">Confirmation, story, social proof, objections, last call.</p><div class="email"><div class="ehead"><span class="eno">Email 1</span><span class="eday">Day 0</span></div><div class="esubj">✅ You&#x27;re in, {{contact.first_name}} — here&#x27;s your training link</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>You just made a great call.</p>
-<p>Your free training is ready to watch right now:</p>
-<p><strong>→ [WATCH THE TRAINING NOW]</strong> <a
-href="https://movetomedsales.com/watch">https://movetomedsales.com/watch</a></p>
-<p>Here's a quick breakdown of what Ryan covers in the next 60
-minutes:</p>
-<ul>
-<li><strong>Why the "traditional path" is keeping you stuck</strong> —
-and what to do instead</li>
-<li><strong>The Core-4 Story Method™</strong> that helped Ryan land 94%
-of every role he interviewed for</li>
-<li><strong>The LinkedIn networking strategy</strong> that gets hiring
-managers coming to YOU</li>
-<li><strong>How to position yourself as the obvious choice</strong> —
-even without a sales background</li>
-<li><strong>The full Interview-to-Offer™ system</strong> — from resume
-to offer letter</li>
-</ul>
-<p>Set aside one focused hour. Take notes. Come back and watch it
-twice.</p>
-<p>The students who land roles fastest are the ones who take this
-seriously from day one.</p>
-<p>Talk soon,</p>
-<p><strong>Ryan Conceicao</strong> HireLevel Rep | 11-Year Oncology
-Medical Sales Rep</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Email Sequences — HireLevel V2 (Book-a-Call)</title><style>
+:root{--navy:#0b1f3a;--blue:#13315c;--ink:#1c2733;--accent:#68409D}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:30px 20px 90px}
+h1.pgh{font-size:27px;margin:0 0 4px;color:var(--navy)}
+.sub{color:#5b6b7c;margin:0 0 22px;font-size:15px}
+.note{background:#fff;border:1px solid #e3e8ef;border-left:4px solid var(--accent);border-radius:8px;padding:15px 18px;margin:0 0 28px;font-size:14px;color:#415061}
+.note b{color:var(--navy)}.note p{margin:0 0 9px}.note p:last-child{margin:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--blue);text-decoration:none;font-weight:600}
+.seq{margin:0 0 36px}
+.seqhead{font:800 16px -apple-system;color:#fff;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:10px;padding:13px 18px;margin:0 0 10px;letter-spacing:.01em}
+.seqhead span{font-weight:600;opacity:.82;font-size:13px;display:block;margin-top:2px}
+.md{background:#fff;border:1px solid #e3e8ef;border-radius:12px;padding:6px 22px 18px}
+.md h1{font-size:18px;color:var(--navy);margin:16px 0 2px}
+.md > h1:first-child{margin-top:10px}
+.md h2{font-size:15px;color:#fff;background:var(--navy);border-radius:7px;padding:9px 13px;margin:24px 0 11px;letter-spacing:.01em}
+.md h3{font-size:13px;color:var(--blue);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.md p{margin:0 0 11px}
+.md ul,.md ol{margin:0 0 12px;padding-left:22px}.md li{margin:0 0 5px}
+.md strong{color:var(--navy)}
+.md a{color:var(--blue);word-break:break-word}
+.md blockquote{background:#f7f4fb;border:1px solid #e3dcf0;border-left:4px solid var(--accent);border-radius:8px;margin:0 0 14px;padding:11px 16px;color:#4a4060;font-size:14px}
+.md blockquote p{margin:0 0 8px}.md blockquote p:last-child{margin:0}
+.md code{background:#eef2f7;padding:1px 6px;border-radius:4px;font-size:13px;color:#13315c}
+.md hr{border:0;border-top:1px solid #e8edf3;margin:22px 0}
+.md table{border-collapse:collapse;width:100%;font-size:13.5px;margin:2px 0 14px}
+.md th{background:#f0f3f8;text-align:left;padding:8px 10px;border:1px solid #e3e8ef;color:var(--navy)}
+.md td{padding:8px 10px;border:1px solid #e3e8ef;vertical-align:top}
+.md em{color:#3a4654}
+</style></head><body><div class="wrap">
+<a class="back" data-rv-allow href="index.html">&larr; Review Home</a>
+<h1 class="pgh">Email Sequences &mdash; V2 Book-a-Call</h1>
+<p class="sub">The full email system for the new book-a-call funnel &middot; updated June 8, 2026</p>
+<div class="note">
+<p>The funnel now drives to a <b>free strategy call</b> (Ryan closes on the call), so the emails changed too. There are <b>3 timing buckets</b> &mdash; the two with written copy are shown below:</p>
+<p><b>&#9312; Post-registration nurture</b> &rarr; every email pushes them to <b>book the call</b> (no checkout links &mdash; the offer, price, and close all happen on the call). Stops the moment they book.</p>
+<p><b>&#9314; Post-call follow-up</b> &rarr; fires if they <b>booked but haven&rsquo;t enrolled</b>. 100% automatic, no tagging: booked + call-time-passed + no purchase &rarr; it sends; buying stops it.</p>
+<p>Not shown (already live in GHL): <b>&#9313;</b> the booking confirmation + 24h/1h reminders, and <b>&#9315;</b> the tier-aware welcome/onboarding that fires on purchase.</p>
+</div>
+<div class="seq"><div class="seqhead">&#9312; Post-Registration Nurture<span>Fires after webinar registration &middot; every CTA = book the call &middot; 7 emails, Days 0&ndash;10</span></div><div class="md"><h1
+id="hirelevel-rep--webinar-funnel-v2-email-sequence-book-a-call-model">HireLevel
+Rep — Webinar Funnel V2 Email Sequence (BOOK-A-CALL model)</h1>
+<h2
+id="every-cta--book-your-free-strategy-call--the-booking-page-no-checkout-links--tierpriceclose-happens-on-the-call-ryan-upsells-the-11">Every
+CTA = "Book your free strategy call" → the booking page. No checkout
+links — tier/price/close happens ON the call (Ryan upsells the
+1:1).</h2>
+<blockquote>
+<p><strong>Built 2026-06-03 for the V2 book-a-call funnel.</strong>
+Supersedes the self-serve sequences (<code>email-sequence-v2.md</code> +
+<code>-prewebinar.md</code>) for the current model. Trigger:
+<strong>webinar registration</strong>. Time-based (no watch-tracking —
+see memory). Goal event / kill switch: contact books the call → tag
+<code>call-booked</code> → stop this sequence. <strong>Booking
+link</strong> in every email = the booking page
+(<code>/coaching-application</code> on the V2 funnel; final URL set at
+launch). Shown below as <strong>[Book your free strategy call
+→]</strong>. One CTA per email. Send from <strong>Ryan @ HireLevel
+Rep</strong>. Plain-text feel.</p>
+</blockquote>
 <hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 2</span><span class="eday">Day 1</span></div><div class="esubj">The question that changed everything for me (read this)</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>Quick story.</p>
-<p>When I was 22, I asked myself one question:</p>
-<p><em>"If I'm not going to spend six figures a year on a degree… how do
-I find a career where I can earn six figures instead?"</em></p>
-<p>That question led me to medical sales. The only problem? Everyone
-told me it was impossible to break in without experience.</p>
-<p>I was a biology major working as a swim instructor. No sales
-background. No healthcare certifications. No connections.</p>
-<p>But I didn't care.</p>
-<p>I hit LinkedIn and started applying to everything. I went on
-<strong>100+ interviews in four months</strong> — not because I wanted
-those jobs, but because I needed the reps.</p>
-<p>Somewhere between interviews 25 and 30, I noticed something:</p>
-<p><strong>The questions never changed. Only the person asking them
-did.</strong></p>
-<p>That's when I built the Core-4 Story Method™ — a set of four
-carefully crafted stories from my own background that I could plug into
-virtually any interview question.</p>
-<p>The result? I went from earning <span
-class="math inline">53<em>K</em><em>t</em><em>o</em> * *</span>185K base
-salary** in six years.</p>
-<p>And when I landed an oncology role that required 7–10 years of
-oncology experience... with zero years of my own?</p>
-<p>It wasn't luck.</p>
-<p>It was the system.</p>
-<p>If you haven't watched the free training yet, here it is:</p>
-<p><strong>→ [WATCH THE FREE TRAINING]</strong> <a
+<h2
+id="email-1--day-0-instant--subject-white_check_mark-youre-in-contactfirst_name--heres-your-training">EMAIL
+1 — Day 0 (instant) | Subject: ✅ You're in, {{contact.first_name}} —
+here's your training</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>You're registered. Your free training is ready to watch right
+now:</p>
+<p><strong>→ [WATCH THE TRAINING]</strong> <a
 href="https://movetomedsales.com/watch">https://movetomedsales.com/watch</a></p>
-<p>It's 60 minutes. It could change the next 6 years of your career.</p>
-<p>Talk soon,</p>
-<p><strong>Ryan Conceicao</strong> HireLevel Rep</p>
+<p>In the next 60 minutes Ryan breaks down the exact system he's used to
+help people with zero medical sales experience land interviews — and
+offers — at companies like Stryker.</p>
+<p>Watch it start to finish. Take notes.</p>
+<p>And if you already know you're serious about making this move, you
+don't have to wait — you can book a free strategy call with Ryan and
+we'll map out your path together:</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p>Talk soon, <strong>Ryan Conceicao</strong> · HireLevel Rep · 11-Year
+Oncology Medical Sales Rep</p>
 <hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 3</span><span class="eday">Day 2</span></div><div class="esubj">She quit her job on Monday. Had Stryker interviews by Friday.</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>I want to tell you about Haley.</p>
-<p>She reached out to me on a Monday morning. Fresh out of college,
-working in mortgage sales, completely burnt out. No medical sales
-experience. No interviews lined up.</p>
-<p>We had one call.</p>
-<p>I told her: <em>"If you're serious about this, you have to commit —
-because that's what hiring managers are looking for."</em></p>
-<p>Two hours later, she called me back.</p>
-<p>She had quit her job.</p>
-<p>She said, <em>"This is what commitment looks like. I'm all
-in."</em></p>
-<p>By Wednesday — two days later — interviews were coming in.</p>
-<p>By Friday, she had multiple rounds scheduled with
-<strong>Stryker</strong> — one of the most respected names in the
-industry.</p>
-<p>What Haley had wasn't experience. She had a system and a
+<h2
+id="email-2--day-1--subject-the-question-that-changed-everything-for-me">EMAIL
+2 — Day 1 | Subject: The question that changed everything for me</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>When I was 22 I asked myself one question: <em>"If I'm not going to
+spend six figures on a degree… how do I find a career where I can earn
+six figures instead?"</em></p>
+<p>That led me to medical sales. Everyone told me it was impossible to
+break in without experience. I was a biology major working as a swim
+instructor — no sales background, no connections.</p>
+<p>I went on 100+ interviews in four months. Somewhere around interview
+25, I noticed the questions never changed — only the person asking them
+did. That's when I built the system I now teach.</p>
+<p>I went from $53K to $185K base in six years.</p>
+<p>If you watched the training, you've seen the framework. The fastest
+way to apply it to <em>your</em> situation is to get on a quick call
+with me:</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p>We'll figure out your starting point and your next move. No
+pressure.</p>
+<p><strong>Ryan</strong></p>
+<hr />
+<h2
+id="email-3--day-2--subject-she-quit-her-job-monday-stryker-interviews-by-friday">EMAIL
+3 — Day 2 | Subject: She quit her job Monday. Stryker interviews by
+Friday.</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>Haley reached out on a Monday — fresh out of college, in mortgage
+sales, burnt out. No medical sales experience.</p>
+<p>We had one call. I told her: <em>"If you're serious, you have to
+commit — that's what hiring managers are looking for."</em> Two hours
+later she called back. She'd quit her job. <em>"This is what commitment
+looks like. I'm all in."</em></p>
+<p>By Wednesday, interviews were coming in. By Friday, she had multiple
+rounds with <strong>Stryker</strong>.</p>
+<p>What Haley had wasn't experience. It was a system — and a
 decision.</p>
-<p>If you watched the free training and you're ready to take the next
-step — the Interview-to-Offer™ program is open for enrollment right
-now.</p>
-<p>We cap cohorts at <strong>30 students</strong>. The last three
-cohorts filled within 48 hours.</p>
-<p>Here's the version most students choose — <strong>Core +
-Resume:</strong></p>
-<ul>
-<li>The full Interview-to-Offer™ video course (7 modules)</li>
-<li>A <strong>done-for-you professional resume</strong> from our career
-services partner ($1,697 value)</li>
-<li>Bi-weekly live Q&amp;A calls with Ryan</li>
-<li>9 career-accelerating bonuses (Brag Book, 30/60/90-Day Plan, Mock
-Scenarios + more)</li>
-<li>30-day money-back guarantee</li>
-</ul>
-<p><strong>Core + Resume — $2,397 early bird</strong> (then $2,497) · or
-4 payments of $731</p>
-<p><strong>→ [ENROLL IN CORE + RESUME]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>Want to start leaner and build your own resume? <strong>Core only —
-$1,097 early bird</strong> (then $1,197): <strong>→ [START WITH
-CORE]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=core">https://movetomedsales.com/checkout-page?tier=core</a></p>
-<p>30-day money-back guarantee on both. No risk.</p>
-<p>If you're serious about breaking into medical sales — now is the
-time.</p>
-<p>Talk soon,</p>
-<p><strong>Ryan Conceicao</strong> HireLevel Rep</p>
+<p>That call we had is the same one I'm offering you. Free, 30 minutes,
+just you and me mapping out how to do what Haley did:</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p><strong>Ryan</strong></p>
 <hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 4</span><span class="eday">Day 3</span></div><div class="esubj">&quot;But I don&#x27;t have sales experience…&quot;</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>I hear this all the time:</p>
-<p><em>"Ryan, this sounds great — but I don't have any sales experience.
-Will this actually work for me?"</em></p>
-<p>Yes. And here's why.</p>
-<p>The medical sales industry doesn't just want former salespeople. It
-wants people who can:</p>
-<p>✓ Connect with physicians and build trust quickly ✓ Learn a product
-deeply and communicate its value ✓ Be coachable, organized, and
-self-motivated ✓ Represent a company with professionalism and
-presence</p>
-<p><strong>Nurses. Teachers. Recent grads. Customer service reps.
-Athletes.</strong></p>
-<p>These backgrounds translate perfectly — if you know how to frame them
-correctly.</p>
-<p>That's exactly what the Interview-to-Offer™ system teaches you.</p>
-<p>Not how to fake experience you don't have.</p>
-<p>How to <strong>lead with the experience you do have</strong> — and
-make it undeniable.</p>
-<p>95% of students who complete the program land a position in medical
-sales.</p>
-<p>Not because they had the "right" background.</p>
-<p>Because they showed up differently than everyone else.</p>
-<p><strong>→ [JOIN THE NEXT COHORT — CORE + RESUME]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>Got questions before you join? Reply to this email. I read every
+<h2 id="email-4--day-3--subject-but-i-dont-have-sales-experience">EMAIL
+4 — Day 3 | Subject: "But I don't have sales experience…"</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>The #1 thing I hear: <em>"This sounds great, but I have no sales
+experience. Will it work for me?"</em></p>
+<p>Yes — and here's why. Medical sales doesn't just want former
+salespeople. It wants people who can build trust with physicians, learn
+a product cold, and show up with professionalism. <strong>Nurses.
+Teachers. Recent grads. Customer service reps. Athletes.</strong> Those
+backgrounds translate perfectly — if you know how to frame them.</p>
+<p>That's the whole game: not faking experience you don't have, but
+leading with the experience you <em>do</em> have and making it
+undeniable.</p>
+<p>On our call I'll show you how to do that with <em>your</em>
+background specifically:</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p>Reply to this email if you've got a question first — I read every
 one.</p>
-<p><strong>Ryan Conceicao</strong> HireLevel Rep</p>
+<p><strong>Ryan</strong></p>
 <hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 5</span><span class="eday">Day 5</span></div><div class="esubj">Last call — cohort filling up</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>I'll keep this short.</p>
-<p>Enrollment is still open — but not for long.</p>
-<p>We cap every cohort at 30 students to keep the experience
-high-quality and personal. When it's full, it's full.</p>
-<p>If breaking into medical sales is on your list for this year — this
-is your window.</p>
-<p>Here's what you get:</p>
+<h2
+id="email-5--day-5--subject-from-dental-hygienist-to-six-figure-pharma-rep">EMAIL
+5 — Day 5 | Subject: From dental hygienist to six-figure pharma rep</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>My sister Olivia was a dental hygienist. Great at her job — but the
+physical demands were breaking her body down, and she'd hit the ceiling
+of what she could earn.</p>
+<p>She used the exact framework I teach. Within a few months she landed
+her first medical sales role. Eight months after that, she moved into a
+pharma role making six figures.</p>
+<p>She didn't have a sales background either. She had a system and
+someone in her corner.</p>
+<p>That's what the strategy call is. 30 minutes, free. Here's what we'll
+cover:</p>
 <ul>
-<li>The full Interview-to-Offer™ video course (7 modules)</li>
-<li>Bi-weekly live Q&amp;A calls with Ryan</li>
-<li>9 career-accelerating bonuses (Brag Book, 30/60/90-Day Plan, Mock
-Scenarios + more)</li>
-<li>30-day money-back guarantee</li>
+<li>Where you are now and the skills you already have that medical sales
+companies want</li>
+<li>Your 30-day plan to start landing interviews</li>
+<li>Whether Interview-to-Offer™ is the right fit to get you there (and
+if it's not, I'll tell you)</li>
 </ul>
-<p>Two ways in:</p>
-<p>🟣 <strong>Core + Resume</strong> — full system + a done-for-you
-professional resume — **<span
-class="math inline">2, 397<em>e</em><em>a</em><em>r</em><em>l</em><em>y</em><em>b</em><em>i</em><em>r</em><em>d</em> * *(</span>2,497
-after) · $731 × 4 · ⭐ most popular <strong>→ [GET CORE +
-RESUME]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>⚪ <strong>Core only</strong> — full system, you build your own
-resume — **<span
-class="math inline">1, 097<em>e</em><em>a</em><em>r</em><em>l</em><em>y</em><em>b</em><em>i</em><em>r</em><em>d</em> * *(</span>1,197
-after) · $357 × 4 <strong>→ [GET CORE]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=core">https://movetomedsales.com/checkout-page?tier=core</a></p>
-<p>After this email, I'll stop following up on this cohort. The next one
-will be announced to the waitlist only.</p>
-<p>Make the call.</p>
-<p><strong>Ryan Conceicao</strong> HireLevel Rep</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p><strong>Ryan</strong></p>
 <hr />
-<p><em>V2 first-half sequence · updated by AbundanceCreator 🔱 for
-HireLevel Rep · June 2026. Pairs with <code>email-sequence-v2.md</code>
-(Emails 6–10, post-watch wave).</em></p>
-</div></div><div class="egroup">② After watching · Days 6–10</div><p class="egd">Sales wave for registrants who watched but haven't bought.</p><div class="email"><div class="ehead"><span class="eno">Email 6</span><span class="eday">Day 6</span></div><div class="esubj">I watched you watch the training</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>I can see you watched the Interview-to-Offer training.</p>
-<p>Probably the whole thing.</p>
-<p>Which tells me something: you're serious about this.</p>
-<p>Most people don't finish a 60-minute training on a Tuesday night
-unless they're genuinely looking for a way out of where they are.</p>
-<p>So I want to ask you directly:</p>
-<p>What's holding you back?</p>
-<p>Because the two things I hear most are:</p>
-<p><strong>"I'm not sure I can swing the investment right now."</strong>
-And: <strong>"I'm not sure it'll work for my situation."</strong></p>
-<p>If it's the money — we have a 4-pay plan ($731/mo for the full Core +
-Resume package). The program pays for itself the moment you land your
-first offer. Most students recover the investment in their first 30 days
-on the job.</p>
-<p>If it's doubt about your specific situation — reply to this email and
-tell me your background. I'll tell you honestly whether I think this is
-right for you. No pitch. No pressure.</p>
-<p>What's the real hesitation?</p>
-<p>— Ryan</p>
-<p>P.S. The current cohort has 7 spots left. I'm not going to tell you
-they'll disappear overnight — but they do fill, and I'd rather you
-decide with full information than scramble at the last minute.</p>
+<h2
+id="email-6--day-7--subject-the-difference-between-the-people-who-make-it-and-the-people-who-dont">EMAIL
+6 — Day 7 | Subject: The difference between the people who make it and
+the people who don't</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>After 11 years in this industry and helping a lot of people break in,
+I can tell you the difference between the ones who make it and the ones
+who don't.</p>
+<p>It's not their résumé. It's not their background. It's not luck.</p>
+<p>It's that at some point they stopped <em>thinking about it</em> and
+made a decision.</p>
+<p>The people still "thinking about it" a year from now will be in the
+exact same job, wondering what could've been. The people who book a
+call, get a plan, and execute are the ones who text me six months later
+from their new role with a company car in the driveway.</p>
+<p>You've watched the training. You know this is possible. The only
+thing between you and a plan is 30 minutes:</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
+<p><strong>Ryan</strong></p>
 <hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 7</span><span class="eday">Day 7</span></div><div class="esubj">The person you&#x27;re competing against (read this)</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>Right now, there's another candidate applying to the same roles you
-want.</p>
-<p>They have the same background as you. Maybe less experience. Maybe
-worse grades.</p>
-<p>But they know something you don't yet.</p>
-<p>They know how to position themselves as the obvious choice before the
-interview even starts.</p>
-<p>They know how to answer "tell me about yourself" in 90 seconds in a
-way that makes the hiring manager lean forward.</p>
-<p>They know how to close the interview — not leave it up to chance.</p>
-<p>I know this because I've sat on the other side of that table 250+
-times.</p>
-<p>And the candidates who lose aren't the ones with the weakest
-résumés.</p>
-<p>They're the ones who didn't know the game was being played.</p>
-<p>The Interview-to-Offer™ program — Core + Resume edition — gives you
-the full system PLUS a done-for-you professional resume from Traction
-Resume so you're not the one who shows up with a generic document.
-<strong>$2,397 early bird · $731/mo</strong>.</p>
-<p><strong>[Join the current cohort →]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>— Ryan</p>
-<hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 8</span><span class="eday">Day 8</span></div><div class="esubj">What happened to Kelsey (and why it matters for you)</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>Kelsey was a dental hygienist.</p>
-<p>8 years in. Good at her job. Miserable in it.</p>
-<p>She'd heard about medical sales but had been told over and over:
-<em>"You need sales experience to break in."</em></p>
-<p>She applied anyway. Got no responses. Hired a resume writer. Got one
-callback in six months.</p>
-<p>Then she found the webinar.</p>
-<p>She watched it on a Thursday. Enrolled in Core + Resume that Friday.
-Started implementing that weekend.</p>
-<p>By day 19, she had her first interview scheduled with a
-cardiovascular device company.</p>
-<p>By day 34, she had an offer. $112K base. Company car. Full
-benefits.</p>
-<p>She texted me: <em>"I've been trying to make this happen for 2 years.
-This program did it in 34 days."</em></p>
-<p>The difference wasn't her background. It was knowing exactly how to
-present what she already had — and showing up with a professional resume
-that actually got past ATS filters.</p>
-<p><strong>Ready to be the next story?</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>— Ryan</p>
-<p>P.S. 30-day money-back guarantee — try the program, and if it's not
-for you, request a refund within 30 days.</p>
-<hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 8.5</span><span class="eday">Day 8 (PM)</span></div><div class="esubj">If Core + Resume is a stretch, read this</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>Quick follow-up.</p>
-<p>I sent you Kelsey's story this morning. She went with Core + Resume —
-the version that includes the done-for-you resume from our career
-services partner.</p>
-<p>That's the package I recommend because the resume part alone usually
-pays for the price difference in the first month (it's why 80% of
-students choose it).</p>
-<p><strong>But I get it — $2,397 isn't pocket change.</strong></p>
-<p>If the full package is a stretch right now, here's the other way
-in:</p>
-<p><strong>Tier 1 — Core only · <span
-class="math inline">1, 097<em>e</em><em>a</em><em>r</em><em>l</em><em>y</em><em>b</em><em>i</em><em>r</em><em>d</em>(</span>1,197
-regular) · $357/mo</strong></p>
-<p>You get the full Interview-to-Offer™ Course (7 modules), bi-weekly
-live Q&amp;A with me, all 9 bonus resources, lifetime access, and the
-30-day money-back guarantee.</p>
-<p>The only thing you're missing is the done-for-you resume — you build
-that yourself using the resume module inside the course.</p>
-<p>That's it. Same course. Same Q&amp;A. Same guarantee. You handle your
-own resume.</p>
-<p><strong>[Start with Core →]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=core">https://movetomedsales.com/checkout-page?tier=core</a></p>
-<p>Either way — get started.</p>
-<p>— Ryan</p>
-<p>P.S. If you want, you can always upgrade to Core + Resume later by
-paying the difference. But early bird closes when the timer hits 0.</p>
-<hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 9</span><span class="eday">Day 9</span></div><div class="esubj">&quot;But I tried before and it didn&#x27;t work…&quot;</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>This one's for the people who've already been burned.</p>
-<p>You applied. You got ignored. Or you got interviews but couldn't
-close them. Or you got the runaround from recruiters who never called
-back.</p>
-<p>And now a part of you is thinking: <em>"Maybe this just isn't for
-me."</em></p>
-<p>I want to push back on that.</p>
-<p>Because here's what I see when I look at your situation:</p>
-<p>You're smart enough to research, find this training, and watch the
-whole thing. You're motivated enough to want a $112K+ career with a
-future. You have real transferable skills that medical companies want —
-they just don't know how to see them yet.</p>
-<p>The reason it didn't work before wasn't you.</p>
-<p>It was the approach.</p>
-<p>Cold applications to job boards? 3% response rate industry-wide.
-Generic résumés? Get filtered out before a human sees them. Walking into
-interviews without the Core-4 story method? You're leaving it up to
-chance.</p>
-<p>The system changes all of that.</p>
-<p>Two ways in:</p>
-<p>🟣 <strong>Core + Resume</strong> — full system + done-for-you
-professional resume — <strong>$2,397 early bird</strong> ⭐ most popular
-<strong>[Get Core + Resume →]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>⚪ <strong>Core only</strong> — full system, you handle your own
-resume — <strong>$1,097 early bird</strong> <strong>[Get Core
-→]</strong> <a
-href="https://movetomedsales.com/checkout-page?tier=core">https://movetomedsales.com/checkout-page?tier=core</a></p>
-<p>Same course. Same Q&amp;A. Same 30-day guarantee. Same cohort. The
-only difference is whether we build the resume for you or you build it
-yourself.</p>
-<p>— Ryan</p>
-<hr />
-</div></div><div class="email"><div class="ehead"><span class="eno">Email 10</span><span class="eday">Day 10</span></div><div class="esubj">Last email (and one honest question)</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
-<p>This is my last follow-up.</p>
-<p>I don't believe in 30-email sequences. If you've watched the training
-and read these emails, you have enough information to make a
-decision.</p>
-<p>So here's the honest question:</p>
-<p><strong>Do you want to break into medical sales — or is this
+<h2 id="email-7--day-10--subject-last-one--an-honest-question">EMAIL 7 —
+Day 10 | Subject: Last one — an honest question</h2>
+<p>Hey {{contact.first_name}},</p>
+<p>This is my last email about this.</p>
+<p>If you've watched the training and read these, you have enough to
+make a decision. So here's the honest question:</p>
+<p><strong>Do you actually want to break into medical sales — or is this
 something you're just thinking about?</strong></p>
-<p>Because those are two very different things.</p>
-<p>If you're just thinking about it — that's okay. Come back when you're
-ready. The training will be here.</p>
-<p>But if you actually want this — if you're tired of the career you're
-in, if you're serious about building something different, if you watched
-that training and thought <em>"this is it"</em> — then the only thing
-standing between you and the first interview is the decision.</p>
-<p>The current cohort closes when it fills. 30 seats. Down to the last
-few.</p>
-<p>Here's everything one more time:</p>
-<p>🟣 <strong>Core + Resume</strong> — full Interview-to-Offer™ system +
-done-for-you professional resume from our career services partner —
-**<span
-class="math inline">2, 397<em>e</em><em>a</em><em>r</em><em>l</em><em>y</em><em>b</em><em>i</em><em>r</em><em>d</em> * *(</span>2,497
-after timer) · $731 × 4 monthly · ⭐ most popular 👉 <a
-href="https://movetomedsales.com/checkout-page?tier=resume">https://movetomedsales.com/checkout-page?tier=resume</a></p>
-<p>⚪ <strong>Core only</strong> — full Interview-to-Offer™ system, you
-build your own resume — **<span
-class="math inline">1, 097<em>e</em><em>a</em><em>r</em><em>l</em><em>y</em><em>b</em><em>i</em><em>r</em><em>d</em> * *(</span>1,197
-after timer) · $357 × 4 monthly 👉 <a
-href="https://movetomedsales.com/checkout-page?tier=core">https://movetomedsales.com/checkout-page?tier=core</a></p>
-<p>30-day money-back guarantee on both. Try the program, and if it's not
-for you, request a refund within 30 days.</p>
+<p>If you're just thinking about it, that's okay. Come back when you're
+ready.</p>
+<p>But if you're serious — if you're tired of where you are and you
+watched that training thinking <em>"this is it"</em> — then the only
+thing standing between you and your first interview is a decision and a
+plan.</p>
+<p>I'll help you build the plan. It's free, it's 30 minutes, and after
+this email I'm going to stop following up on this round.</p>
+<p><strong>→ [Book your free strategy call →]</strong></p>
 <p>Whatever you decide — I genuinely hope you get there.</p>
-<p>— Ryan Conceicao HireLevel Rep | 11-Year Oncology Rep |
-Interview-to-Offer™ Creator</p>
+<p><strong>Ryan Conceicao</strong> HireLevel Rep | 11-Year Oncology Rep
+| Interview-to-Offer™ Creator</p>
 <hr />
-</div></div></div><script src="review-nav.js?v=2" defer></script></body></html>
+<h2 id="ghl-setup-notes">GHL setup notes</h2>
+<ul>
+<li><strong>Trigger:</strong> Contact has
+<code>webinar-registered</code>.</li>
+<li><strong>Kill switch (goal):</strong> Contact books the call → tag
+<code>call-booked</code> (fire from the calendar's "appointment booked"
+trigger) → stop this sequence. Also stop on
+<code>purchased-*</code>.</li>
+<li><strong>Cadence:</strong> Days 0, 1, 2, 3, 5, 7, 10. One CTA each =
+book the call.</li>
+<li><strong>No checkout links, no tier pricing</strong> — the offer, the
+price, Tier 1 downsell, and the Tier 3 ($4,871 1:1) upsell all happen ON
+the call. Keep the emails about getting them on the call.</li>
+<li><strong>Booking link:</strong> the booking page
+(<code>/coaching-application</code>) / or the calendar's direct booking
+URL once live. Set the real URL before launch.</li>
+<li>After a no-show or "not yet": a short re-engage ("still want to make
+this move? grab another time →") — build after launch.</li>
+</ul>
+<p><em>Book-a-call sequence · HireLevel Rep · June 2026.</em></p>
+</div></div><div class="seq"><div class="seqhead">&#9314; Post-Call Follow-up<span>Fires after the call if booked-but-not-enrolled &middot; enroll or rebook &middot; 4 emails, Days 0&ndash;7</span></div><div class="md"><h1 id="v2-post-call-email-sequence--booked-but-not-enrolled-yet">V2
+Post-Call Email Sequence — "Booked but Not Enrolled Yet"</h1>
+<p><strong>Purpose:</strong> Follow up with people who <strong>booked a
+strategy call but haven't enrolled.</strong> Job: get them to enroll
+(send them to the post-call checkout) or rebook if they fell off. Pairs
+with the post-registration nurture
+(<code>email-sequence-v2-bookacall.md</code>) and the tier-aware welcome
+emails (already live, fire on purchase).</p>
+<hr />
+<h2 id="trigger-logic--100-automatic-no-tagging-from-ryan">Trigger logic
+— 100% AUTOMATIC (no tagging from Ryan)</h2>
+<p>GHL already knows the two things that matter, automatically:</p>
+<ul>
+<li><strong>Booked a call?</strong> → the appointment +
+<code>call-booked</code> tag is created when they book. Automatic.</li>
+<li><strong>Bought?</strong> → the <code>purchased-core</code> /
+<code>purchased-resume</code> / <code>purchased-coaching</code> tag
+fires on payment. Automatic.</li>
+</ul>
+<p>So the whole sequence runs on pure logic:</p>
+<blockquote>
+<p><strong>Enter:</strong> contact has <code>call-booked</code>
+<strong>AND</strong> their appointment start time has passed (wait ~2
+hours after) <strong>AND</strong> does <strong>NOT</strong> have any
+<code>purchased-*</code> tag.</p>
+<p><strong>Kill-switch (exit immediately):</strong> any
+<code>purchased-*</code> tag is added (they enrolled) → stop the
+sequence and let the <strong>Welcome</strong> sequence take over.</p>
+</blockquote>
+<p>Ryan never has to tag anything. The only <em>optional</em> human
+input is below.</p>
+<h3 id="optional-refinement-only-if-you-want-it-no-show-split">Optional
+refinement (only if you want it): no-show split</h3>
+<p>The one thing GHL can't know on its own is <strong>no-show vs.
+showed-but-didn't-buy.</strong> If Ryan marks the appointment
+<strong>"No-show"</strong> (one click in the calendar — and it's good to
+track show-rate anyway), you can branch:</p>
+<ul>
+<li><strong>No-show</strong> → lead with the rebook message (Email 1B
+below).</li>
+<li><strong>Showed, no purchase</strong> → lead with the enroll message
+(Email 1A below).</li>
+</ul>
+<p>If Ryan <em>doesn't</em> mark it, the default <strong>Email 1
+(combined)</strong> covers both cleanly. Recommendation: <strong>launch
+with the combined version</strong>, add the split later only if you want
+tighter copy.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<ul>
+<li><strong>From:</strong> Ryan Conceicao — send from the
+<strong>verified <code>movetomedsales.com</code> domain</strong> (same
+as the rest of the webinar emails, for deliverability). Confirm the
+exact address (e.g. <code>ryan@movetomedsales.com</code>).</li>
+<li><strong>Reply-to:</strong> a monitored inbox (Ryan / support).</li>
+<li><strong>Merge field:</strong> <code>{{contact.first_name}}</code>
+(confirmed renders).</li>
+<li><strong>Links:</strong>
+<ul>
+<li><code>[ENROLL]</code> → the post-call checkout
+(<code>https://enroll.movetomedsales.com/checkout</code> once the
+domain's connected).</li>
+<li><code>[REBOOK]</code> → the calendar booking link
+(<code>https://api.leadconnectorhq.com/widget/booking/M9QQ4dpr4ByHqHLuo9SI</code>,
+or <code>movetomedsales.com/coaching-application</code> once live).</li>
+</ul></li>
+<li><strong>Cadence:</strong> Day 0 (≈2h after call) · Day 2 · Day 4 ·
+Day 7. Four emails.</li>
+</ul>
+<hr />
+<h2
+id="email-1--day-0-2-hours-after-the-scheduled-call-time--combined">EMAIL
+1 — Day 0 (≈2 hours after the scheduled call time) — COMBINED</h2>
+<p><strong>Subject:</strong> Your next step, {{contact.first_name}}
+<strong>Preview:</strong> Whether we connected or got crossed wires…</p>
+<p>Hi {{contact.first_name}},</p>
+<p>If we got to talk today — it was great hearing where you're at and
+what you're working toward.</p>
+<p>When you're ready to get started, here's your link to lock in your
+spot: <strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
+<p>And if we somehow missed each other (it happens — calls run long,
+life gets busy), no worries at all. Grab a new time and we'll pick up
+right where we left off: <strong>→ <a href="[REBOOK]">Grab a new
+time</a></strong></p>
+<p>Either way — you already took the hardest step. You decided to
+actually <em>do</em> something about getting into medical sales instead
+of waiting around. Let's keep that momentum going.</p>
+<p>Talk soon, <strong>Ryan Conceicao</strong> Active Oncology Pharma Rep
+· Founder, HireLevel University</p>
+<hr />
+<h3 id="optional-email-1a--showed-didnt-enroll">(Optional) EMAIL 1A —
+showed, didn't enroll</h3>
+<p><strong>Subject:</strong> Great talking, {{contact.first_name}} —
+here's your next step <strong>Preview:</strong> Everything we covered,
+in one link.</p>
+<p>Hi {{contact.first_name}},</p>
+<p>Really enjoyed our conversation today. Based on where you're at, I
+think you're in a great spot to make this move — and you've got a real
+plan now instead of guesswork.</p>
+<p>Whenever you're ready to get started, here's your link: <strong>→ <a
+href="[ENROLL]">Get started here</a></strong></p>
+<p>Any last questions before you jump in? Just reply to this email — it
+comes straight to me.</p>
+<p>— <strong>Ryan</strong></p>
+<h3 id="optional-email-1b--no-show">(Optional) EMAIL 1B — no-show</h3>
+<p><strong>Subject:</strong> We missed you, {{contact.first_name}}
+<strong>Preview:</strong> Life happens — let's find a new time.</p>
+<p>Hi {{contact.first_name}},</p>
+<p>Looks like we got crossed wires for your call today — totally fine,
+it happens.</p>
+<p>I still want to help you map out your path into medical sales, so
+grab whatever time works best and we'll talk: <strong>→ <a
+href="[REBOOK]">Grab a new time</a></strong></p>
+<p>It's 30 minutes, it's free, and worst case you walk away with a clear
+plan. Let's get it on the calendar.</p>
+<p>— <strong>Ryan</strong></p>
+<hr />
+<h2 id="email-2--day-2">EMAIL 2 — Day 2</h2>
+<p><strong>Subject:</strong> the part everyone overthinks
+<strong>Preview:</strong> It's not your resume. It's not your
+experience.</p>
+<p>{{contact.first_name}},</p>
+<p>The #1 thing that keeps people <em>out</em> of medical sales isn't
+their resume, their degree, or their lack of "sales experience."</p>
+<p>It's waiting until they feel <strong>ready.</strong></p>
+<p>I've watched people with zero medical background land $80K–$100K+
+roles in under 60 days — not because they were special, but because they
+stopped guessing and followed a proven process.</p>
+<p>That's the entire point of Interview-to-Offer™: you stop guessing and
+start moving.</p>
+<p>If you're ready to start: <strong>→ <a href="[ENROLL]">Enroll
+here</a></strong> Still have a question first? <strong>→ <a
+href="[REBOOK]">Grab a time</a></strong></p>
+<p>— <strong>Ryan</strong></p>
+<hr />
+<h2 id="email-3--day-4">EMAIL 3 — Day 4</h2>
+<p><strong>Subject:</strong> Haley did this in 2 weeks
+<strong>Preview:</strong> Hired at Stryker. Two weeks and a day.</p>
+<p>{{contact.first_name}},</p>
+<p>Quick story.</p>
+<p>Haley came to us with <strong>no medical sales experience.</strong>
+She wasn't sure it would work for her either.</p>
+<p>Two weeks and a day later, she had an offer from
+<strong>Stryker</strong> — one of the biggest names in the industry. Her
+words: <em>"I would not be here without you guys."</em></p>
+<p>That's not luck. It's what happens when you've got the exact playbook
+<em>and</em> a team in your corner who's done it.</p>
+<p>We keep our cohorts small — <strong>capped at 30</strong> — so
+everyone actually gets that level of support. Which means spots do fill
+up.</p>
+<p>Ready to be the next story? <strong>→ <a href="[ENROLL]">Enroll
+here</a></strong> Want to talk it through first? <strong>→ <a
+href="[REBOOK]">Grab a time</a></strong></p>
+<p>— <strong>Ryan</strong></p>
+<hr />
+<h2 id="email-4--day-7">EMAIL 4 — Day 7</h2>
+<p><strong>Subject:</strong> closing the loop <strong>Preview:</strong>
+Last one from me on this.</p>
+<p>{{contact.first_name}},</p>
+<p>I won't keep crowding your inbox, so this is the last note I'll send
+about getting started.</p>
+<p>Here's the honest truth I've seen play out hundreds of times: the
+people who break into medical sales aren't the most qualified — they're
+the ones who <strong>decide and move.</strong> Everyone else is still
+"thinking about it" a year later, in the exact same spot.</p>
+<p>If now's your time, I'd genuinely love to have you in: <strong>→ <a
+href="[ENROLL]">Enroll here</a></strong></p>
+<p>And if the timing just isn't right yet, no hard feelings at all — the
+door's open whenever you are. You can always grab a time and we'll talk:
+<strong>→ <a href="[REBOOK]">Grab a time</a></strong></p>
+<p>Rooting for you either way.</p>
+<p><strong>Ryan Conceicao</strong> Active Oncology Pharma Rep · Founder,
+HireLevel University</p>
+<hr />
+<h2 id="how-this-fits-the-full-email-system-3-buckets">How this fits the
+full email system (3 buckets)</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Sequence</th>
+<th>Trigger</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>After registration</td>
+<td><strong>Post-reg nurture → book the call</strong></td>
+<td><code>webinar-registered</code>, exits on
+<code>call-booked</code></td>
+<td>✅ drafted (<code>email-sequence-v2-bookacall.md</code>)</td>
+</tr>
+<tr>
+<td>Booked → call</td>
+<td><strong>Show-up reminders</strong> (confirmation + 24h + 1h)</td>
+<td>booking created</td>
+<td>✅ live (calendar)</td>
+</tr>
+<tr>
+<td>After call, no purchase</td>
+<td><strong>This sequence (enroll / rebook)</strong></td>
+<td><code>call-booked</code> + time passed + NOT
+<code>purchased-*</code></td>
+<td>✅ drafted (this file)</td>
+</tr>
+<tr>
+<td>After purchase</td>
+<td><strong>Tier-aware welcome / onboarding</strong></td>
+<td><code>purchased-*</code></td>
+<td>✅ live</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kill-switches keep it clean:</strong> book a call → the "book
+the call" emails stop. Buy → everything else stops and Welcome takes
+over.</p>
+</div></div></div><script src="review-nav.js?v=3" defer></script></body></html>
