@@ -1,70 +1,20 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Email Sequences — HireLevel V2 (Book-a-Call)</title><style>
-:root{--navy:#0b1f3a;--blue:#13315c;--ink:#1c2733;--accent:#68409D}
-*{box-sizing:border-box}
-body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:780px;margin:0 auto;padding:30px 20px 90px}
-h1.pgh{font-size:27px;margin:0 0 4px;color:var(--navy)}
-.sub{color:#5b6b7c;margin:0 0 22px;font-size:15px}
-.note{background:#fff;border:1px solid #e3e8ef;border-left:4px solid var(--accent);border-radius:8px;padding:15px 18px;margin:0 0 28px;font-size:14px;color:#415061}
-.note b{color:var(--navy)}.note p{margin:0 0 9px}.note p:last-child{margin:0}
-.back{display:inline-block;margin-bottom:16px;color:var(--blue);text-decoration:none;font-weight:600}
-.seq{margin:0 0 36px}
-.seqhead{font:800 16px -apple-system;color:#fff;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:10px;padding:13px 18px;margin:0 0 10px;letter-spacing:.01em}
-.seqhead span{font-weight:600;opacity:.82;font-size:13px;display:block;margin-top:2px}
-.md{background:#fff;border:1px solid #e3e8ef;border-radius:12px;padding:6px 22px 18px}
-.md h1{font-size:18px;color:var(--navy);margin:16px 0 2px}
-.md > h1:first-child{margin-top:10px}
-.md h2{font-size:15px;color:#fff;background:var(--navy);border-radius:7px;padding:9px 13px;margin:24px 0 11px;letter-spacing:.01em}
-.md h3{font-size:13px;color:var(--blue);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.04em}
-.md p{margin:0 0 11px}
-.md ul,.md ol{margin:0 0 12px;padding-left:22px}.md li{margin:0 0 5px}
-.md strong{color:var(--navy)}
-.md a{color:var(--blue);word-break:break-word}
-.md blockquote{background:#f7f4fb;border:1px solid #e3dcf0;border-left:4px solid var(--accent);border-radius:8px;margin:0 0 14px;padding:11px 16px;color:#4a4060;font-size:14px}
-.md blockquote p{margin:0 0 8px}.md blockquote p:last-child{margin:0}
-.md code{background:#eef2f7;padding:1px 6px;border-radius:4px;font-size:13px;color:#13315c}
-.md hr{border:0;border-top:1px solid #e8edf3;margin:22px 0}
-.md table{border-collapse:collapse;width:100%;font-size:13.5px;margin:2px 0 14px}
-.md th{background:#f0f3f8;text-align:left;padding:8px 10px;border:1px solid #e3e8ef;color:var(--navy)}
-.md td{padding:8px 10px;border:1px solid #e3e8ef;vertical-align:top}
-.md em{color:#3a4654}
-</style></head><body><div class="wrap">
-<a class="back" data-rv-allow href="index.html">&larr; Review Home</a>
-<h1 class="pgh">Email Sequences &mdash; V2 Book-a-Call</h1>
-<p class="sub">The full email system for the new book-a-call funnel &middot; updated June 8, 2026</p>
-<div class="note">
-<p>The funnel now drives to a <b>free strategy call</b> (Ryan closes on the call), so the emails changed too. There are <b>3 timing buckets</b> &mdash; the two with written copy are shown below:</p>
-<p><b>&#9312; Post-registration nurture</b> &rarr; every email pushes them to <b>book the call</b> (no checkout links &mdash; the offer, price, and close all happen on the call). Stops the moment they book.</p>
-<p><b>&#9314; Post-call follow-up</b> &rarr; fires if they <b>booked but haven&rsquo;t enrolled</b>. 100% automatic, no tagging: booked + call-time-passed + no purchase &rarr; it sends; buying stops it.</p>
-<p>Not shown (already live in GHL): <b>&#9313;</b> the booking confirmation + 24h/1h reminders, and <b>&#9315;</b> the tier-aware welcome/onboarding that fires on purchase.</p>
-</div>
-<div class="seq"><div class="seqhead">&#9312; Post-Registration Nurture<span>Fires after webinar registration &middot; every CTA = book the call &middot; 7 emails, Days 0&ndash;10</span></div><div class="md"><h1
-id="hirelevel-rep--webinar-funnel-v2-email-sequence-book-a-call-model">HireLevel
-Rep — Webinar Funnel V2 Email Sequence (BOOK-A-CALL model)</h1>
-<h2
-id="every-cta--book-your-free-strategy-call--the-booking-page-no-checkout-links--tierpriceclose-happens-on-the-call-ryan-upsells-the-11">Every
-CTA = "Book your free strategy call" → the booking page. No checkout
-links — tier/price/close happens ON the call (Ryan upsells the
-1:1).</h2>
-<blockquote>
-<p><strong>Built 2026-06-03 for the V2 book-a-call funnel.</strong>
-Supersedes the self-serve sequences (<code>email-sequence-v2.md</code> +
-<code>-prewebinar.md</code>) for the current model. Trigger:
-<strong>webinar registration</strong>. Time-based (no watch-tracking —
-see memory). Goal event / kill switch: contact books the call → tag
-<code>call-booked</code> → stop this sequence. <strong>Booking
-link</strong> in every email = the booking page
-(<code>/coaching-application</code> on the V2 funnel; final URL set at
-launch). Shown below as <strong>[Book your free strategy call
-→]</strong>. One CTA per email. Send from <strong>Ryan @ HireLevel
-Rep</strong>. Plain-text feel.</p>
-</blockquote>
-<hr />
-<h2
-id="email-1--day-0-instant--subject-white_check_mark-youre-in-contactfirst_name--heres-your-training">EMAIL
-1 — Day 0 (instant) | Subject: ✅ You're in, {{contact.first_name}} —
-here's your training</h2>
-<p>Hey {{contact.first_name}},</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Email Copy — HireLevel V2</title><style>
+:root{--navy:#0b1f3a;--blue:#13315c;--ink:#1c2733}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 90px}
+h1{font-size:26px;margin:0 0 4px;color:var(--navy)}.sub{color:#5b6b7c;margin:0 0 22px}
+.back{display:inline-block;margin-bottom:18px;color:var(--blue);text-decoration:none;font-weight:600}
+.egroup{font:800 14px -apple-system;letter-spacing:.02em;color:#0b1f3a;margin:30px 0 2px;border-top:2px solid #e3e8ef;padding-top:18px}
+.egd{font-size:13.5px;color:#5b6b7c;margin:0 0 14px}
+.email{background:#fff;border:1px solid #e3e8ef;border-radius:12px;margin:0 0 16px;overflow:hidden}
+.ehead{display:flex;gap:10px;align-items:center;background:#0b1f3a;color:#fff;padding:9px 16px}
+.eno{font-weight:800;font-size:13px;letter-spacing:.03em}
+.eday{font-size:12px;opacity:.75;border-left:1px solid #ffffff33;padding-left:10px}
+.esubj{font-weight:700;color:#0b1f3a;padding:12px 16px 0;font-size:16px}
+.ebody{padding:4px 16px 16px;color:#28323d}.ebody p{margin:0 0 10px}.ebody a{color:#13315c;word-break:break-word}
+.ebody ul{margin:0 0 10px;padding-left:20px}.ebody li{margin:0 0 4px}.ebody strong{color:#0b1f3a}.ebody em{color:#3a4654}
+.ebody hr{display:none}
+</style></head><body><div class="wrap"><a class="back" data-rv-allow href="index.html">← Review Home</a><h1>Email Copy</h1><p class="sub">The actual emails a lead receives, grouped by what they do. Updated June 8, 2026.</p><div class="egroup">① After someone registers for the webinar</div><p class="egd">Every email points them to book a free strategy call with Ryan.</p><div class="email"><div class="ehead"><span class="eno">Email 1</span><span class="eday">Day 0</span></div><div class="esubj">✅ You&#x27;re in, {{contact.first_name}} — here&#x27;s your training</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>You're registered. Your free training is ready to watch right
 now:</p>
 <p><strong>→ [WATCH THE TRAINING]</strong> <a
@@ -78,12 +28,7 @@ don't have to wait — you can book a free strategy call with Ryan and
 we'll map out your path together:</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
 <p>Talk soon, <strong>Ryan Conceicao</strong> · HireLevel Rep · 11-Year
-Oncology Medical Sales Rep</p>
-<hr />
-<h2
-id="email-2--day-1--subject-the-question-that-changed-everything-for-me">EMAIL
-2 — Day 1 | Subject: The question that changed everything for me</h2>
-<p>Hey {{contact.first_name}},</p>
+Oncology Medical Sales Rep</p></div></div><div class="email"><div class="ehead"><span class="eno">Email 2</span><span class="eday">Day 1</span></div><div class="esubj">The question that changed everything for me</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>When I was 22 I asked myself one question: <em>"If I'm not going to
 spend six figures on a degree… how do I find a career where I can earn
 six figures instead?"</em></p>
@@ -100,13 +45,7 @@ with me:</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
 <p>We'll figure out your starting point and your next move. No
 pressure.</p>
-<p><strong>Ryan</strong></p>
-<hr />
-<h2
-id="email-3--day-2--subject-she-quit-her-job-monday-stryker-interviews-by-friday">EMAIL
-3 — Day 2 | Subject: She quit her job Monday. Stryker interviews by
-Friday.</h2>
-<p>Hey {{contact.first_name}},</p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email 3</span><span class="eday">Day 2</span></div><div class="esubj">She quit her job Monday. Stryker interviews by Friday.</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>Haley reached out on a Monday — fresh out of college, in mortgage
 sales, burnt out. No medical sales experience.</p>
 <p>We had one call. I told her: <em>"If you're serious, you have to
@@ -120,11 +59,7 @@ decision.</p>
 <p>That call we had is the same one I'm offering you. Free, 30 minutes,
 just you and me mapping out how to do what Haley did:</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
-<p><strong>Ryan</strong></p>
-<hr />
-<h2 id="email-4--day-3--subject-but-i-dont-have-sales-experience">EMAIL
-4 — Day 3 | Subject: "But I don't have sales experience…"</h2>
-<p>Hey {{contact.first_name}},</p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email 4</span><span class="eday">Day 3</span></div><div class="esubj">&quot;But I don&#x27;t have sales experience…&quot;</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>The #1 thing I hear: <em>"This sounds great, but I have no sales
 experience. Will it work for me?"</em></p>
 <p>Yes — and here's why. Medical sales doesn't just want former
@@ -140,12 +75,7 @@ background specifically:</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
 <p>Reply to this email if you've got a question first — I read every
 one.</p>
-<p><strong>Ryan</strong></p>
-<hr />
-<h2
-id="email-5--day-5--subject-from-dental-hygienist-to-six-figure-pharma-rep">EMAIL
-5 — Day 5 | Subject: From dental hygienist to six-figure pharma rep</h2>
-<p>Hey {{contact.first_name}},</p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email 5</span><span class="eday">Day 5</span></div><div class="esubj">From dental hygienist to six-figure pharma rep</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>My sister Olivia was a dental hygienist. Great at her job — but the
 physical demands were breaking her body down, and she'd hit the ceiling
 of what she could earn.</p>
@@ -164,13 +94,7 @@ companies want</li>
 if it's not, I'll tell you)</li>
 </ul>
 <p><strong>→ [Book your free strategy call →]</strong></p>
-<p><strong>Ryan</strong></p>
-<hr />
-<h2
-id="email-6--day-7--subject-the-difference-between-the-people-who-make-it-and-the-people-who-dont">EMAIL
-6 — Day 7 | Subject: The difference between the people who make it and
-the people who don't</h2>
-<p>Hey {{contact.first_name}},</p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email 6</span><span class="eday">Day 7</span></div><div class="esubj">The difference between the people who make it and the people who don&#x27;t</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>After 11 years in this industry and helping a lot of people break in,
 I can tell you the difference between the ones who make it and the ones
 who don't.</p>
@@ -184,11 +108,7 @@ from their new role with a company car in the driveway.</p>
 <p>You've watched the training. You know this is possible. The only
 thing between you and a plan is 30 minutes:</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
-<p><strong>Ryan</strong></p>
-<hr />
-<h2 id="email-7--day-10--subject-last-one--an-honest-question">EMAIL 7 —
-Day 10 | Subject: Last one — an honest question</h2>
-<p>Hey {{contact.first_name}},</p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email 7</span><span class="eday">Day 10</span></div><div class="esubj">Last one — an honest question</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
 <p>This is my last email about this.</p>
 <p>If you've watched the training and read these, you have enough to
 make a decision. So here's the honest question:</p>
@@ -205,243 +125,84 @@ this email I'm going to stop following up on this round.</p>
 <p><strong>→ [Book your free strategy call →]</strong></p>
 <p>Whatever you decide — I genuinely hope you get there.</p>
 <p><strong>Ryan Conceicao</strong> HireLevel Rep | 11-Year Oncology Rep
-| Interview-to-Offer™ Creator</p>
-<hr />
-<h2 id="ghl-setup-notes">GHL setup notes</h2>
-<ul>
-<li><strong>Trigger:</strong> Contact has
-<code>webinar-registered</code>.</li>
-<li><strong>Kill switch (goal):</strong> Contact books the call → tag
-<code>call-booked</code> (fire from the calendar's "appointment booked"
-trigger) → stop this sequence. Also stop on
-<code>purchased-*</code>.</li>
-<li><strong>Cadence:</strong> Days 0, 1, 2, 3, 5, 7, 10. One CTA each =
-book the call.</li>
-<li><strong>No checkout links, no tier pricing</strong> — the offer, the
-price, Tier 1 downsell, and the Tier 3 ($4,871 1:1) upsell all happen ON
-the call. Keep the emails about getting them on the call.</li>
-<li><strong>Booking link:</strong> the booking page
-(<code>/coaching-application</code>) / or the calendar's direct booking
-URL once live. Set the real URL before launch.</li>
-<li>After a no-show or "not yet": a short re-engage ("still want to make
-this move? grab another time →") — build after launch.</li>
-</ul>
-<p><em>Book-a-call sequence · HireLevel Rep · June 2026.</em></p>
-</div></div><div class="seq"><div class="seqhead">&#9314; Post-Call Follow-up<span>Fires after the call if booked-but-not-enrolled &middot; enroll or rebook &middot; 4 emails, Days 0&ndash;7</span></div><div class="md"><h1 id="v2-post-call-email-sequence--booked-but-not-enrolled-yet">V2
-Post-Call Email Sequence — "Booked but Not Enrolled Yet"</h1>
-<p><strong>Purpose:</strong> Follow up with people who <strong>booked a
-strategy call but haven't enrolled.</strong> Job: get them to enroll
-(send them to the post-call checkout) or rebook if they fell off. Pairs
-with the post-registration nurture
-(<code>email-sequence-v2-bookacall.md</code>) and the tier-aware welcome
-emails (already live, fire on purchase).</p>
-<hr />
-<h2 id="trigger-logic--100-automatic-no-tagging-from-ryan">Trigger logic
-— 100% AUTOMATIC (no tagging from Ryan)</h2>
-<p>GHL already knows the two things that matter, automatically:</p>
-<ul>
-<li><strong>Booked a call?</strong> → the appointment +
-<code>call-booked</code> tag is created when they book. Automatic.</li>
-<li><strong>Bought?</strong> → the <code>purchased-core</code> /
-<code>purchased-resume</code> / <code>purchased-coaching</code> tag
-fires on payment. Automatic.</li>
-</ul>
-<p>So the whole sequence runs on pure logic:</p>
-<blockquote>
-<p><strong>Enter:</strong> contact has <code>call-booked</code>
-<strong>AND</strong> their appointment start time has passed (wait ~2
-hours after) <strong>AND</strong> does <strong>NOT</strong> have any
-<code>purchased-*</code> tag.</p>
-<p><strong>Kill-switch (exit immediately):</strong> any
-<code>purchased-*</code> tag is added (they enrolled) → stop the
-sequence and let the <strong>Welcome</strong> sequence take over.</p>
-</blockquote>
-<p>Ryan never has to tag anything. The only <em>optional</em> human
-input is below.</p>
-<h3 id="optional-refinement-only-if-you-want-it-no-show-split">Optional
-refinement (only if you want it): no-show split</h3>
-<p>The one thing GHL can't know on its own is <strong>no-show vs.
-showed-but-didn't-buy.</strong> If Ryan marks the appointment
-<strong>"No-show"</strong> (one click in the calendar — and it's good to
-track show-rate anyway), you can branch:</p>
-<ul>
-<li><strong>No-show</strong> → lead with the rebook message (Email 1B
-below).</li>
-<li><strong>Showed, no purchase</strong> → lead with the enroll message
-(Email 1A below).</li>
-</ul>
-<p>If Ryan <em>doesn't</em> mark it, the default <strong>Email 1
-(combined)</strong> covers both cleanly. Recommendation: <strong>launch
-with the combined version</strong>, add the split later only if you want
-tighter copy.</p>
-<hr />
-<h2 id="settings">Settings</h2>
-<ul>
-<li><strong>From:</strong> Ryan Conceicao — send from the
-<strong>verified <code>movetomedsales.com</code> domain</strong> (same
-as the rest of the webinar emails, for deliverability). Confirm the
-exact address (e.g. <code>ryan@movetomedsales.com</code>).</li>
-<li><strong>Reply-to:</strong> a monitored inbox (Ryan / support).</li>
-<li><strong>Merge field:</strong> <code>{{contact.first_name}}</code>
-(confirmed renders).</li>
-<li><strong>Links:</strong>
-<ul>
-<li><code>[ENROLL]</code> → the post-call checkout
-(<code>https://enroll.movetomedsales.com/checkout</code> once the
-domain's connected).</li>
-<li><code>[REBOOK]</code> → the calendar booking link
-(<code>https://api.leadconnectorhq.com/widget/booking/M9QQ4dpr4ByHqHLuo9SI</code>,
-or <code>movetomedsales.com/coaching-application</code> once live).</li>
-</ul></li>
-<li><strong>Cadence:</strong> Day 0 (≈2h after call) · Day 2 · Day 4 ·
-Day 7. Four emails.</li>
-</ul>
-<hr />
-<h2
-id="email-1--day-0-2-hours-after-the-scheduled-call-time--combined">EMAIL
-1 — Day 0 (≈2 hours after the scheduled call time) — COMBINED</h2>
-<p><strong>Subject:</strong> Your next step, {{contact.first_name}}
-<strong>Preview:</strong> Whether we connected or got crossed wires…</p>
-<p>Hi {{contact.first_name}},</p>
-<p>If we got to talk today — it was great hearing where you're at and
-what you're working toward.</p>
-<p>When you're ready to get started, here's your link to lock in your
-spot: <strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
-<p>And if we somehow missed each other (it happens — calls run long,
-life gets busy), no worries at all. Grab a new time and we'll pick up
-right where we left off: <strong>→ <a href="[REBOOK]">Grab a new
-time</a></strong></p>
-<p>Either way — you already took the hardest step. You decided to
-actually <em>do</em> something about getting into medical sales instead
-of waiting around. Let's keep that momentum going.</p>
-<p>Talk soon, <strong>Ryan Conceicao</strong> Active Oncology Pharma Rep
-· Founder, HireLevel University</p>
-<hr />
-<h3 id="optional-email-1a--showed-didnt-enroll">(Optional) EMAIL 1A —
-showed, didn't enroll</h3>
-<p><strong>Subject:</strong> Great talking, {{contact.first_name}} —
-here's your next step <strong>Preview:</strong> Everything we covered,
-in one link.</p>
-<p>Hi {{contact.first_name}},</p>
-<p>Really enjoyed our conversation today. Based on where you're at, I
-think you're in a great spot to make this move — and you've got a real
-plan now instead of guesswork.</p>
-<p>Whenever you're ready to get started, here's your link: <strong>→ <a
-href="[ENROLL]">Get started here</a></strong></p>
+| Interview-to-Offer™ Creator</p></div></div><div class="egroup">② After the call — they showed up (haven’t enrolled yet)</div><p class="egd">They talked to Ryan and have a plan — these nudge them to enroll.</p><div class="email"><div class="ehead"><span class="eno">Email A1</span><span class="eday">Day 0</span></div><div class="esubj">Great talking, {{contact.first_name}} — here&#x27;s your next step</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
+<p>Really enjoyed our conversation today. Based on where you're at,
+you're in a great spot to make this move — and now you've got a real
+plan instead of guesswork.</p>
+<p>Whenever you're ready to get started, here's your link:</p>
+<p><strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
 <p>Any last questions before you jump in? Just reply to this email — it
 comes straight to me.</p>
-<p>— <strong>Ryan</strong></p>
-<h3 id="optional-email-1b--no-show">(Optional) EMAIL 1B — no-show</h3>
-<p><strong>Subject:</strong> We missed you, {{contact.first_name}}
-<strong>Preview:</strong> Life happens — let's find a new time.</p>
-<p>Hi {{contact.first_name}},</p>
-<p>Looks like we got crossed wires for your call today — totally fine,
-it happens.</p>
-<p>I still want to help you map out your path into medical sales, so
-grab whatever time works best and we'll talk: <strong>→ <a
-href="[REBOOK]">Grab a new time</a></strong></p>
-<p>It's 30 minutes, it's free, and worst case you walk away with a clear
-plan. Let's get it on the calendar.</p>
-<p>— <strong>Ryan</strong></p>
-<hr />
-<h2 id="email-2--day-2">EMAIL 2 — Day 2</h2>
-<p><strong>Subject:</strong> the part everyone overthinks
-<strong>Preview:</strong> It's not your resume. It's not your
-experience.</p>
-<p>{{contact.first_name}},</p>
-<p>The #1 thing that keeps people <em>out</em> of medical sales isn't
-their resume, their degree, or their lack of "sales experience."</p>
-<p>It's waiting until they feel <strong>ready.</strong></p>
+<p>Talk soon, <strong>Ryan Conceicao</strong> · HireLevel Rep</p></div></div><div class="email"><div class="ehead"><span class="eno">Email A2</span><span class="eday">Day 2</span></div><div class="esubj">the part everyone overthinks</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>The #1 thing that keeps people out of medical sales isn't their
+resume or their experience. It's waiting until they feel "ready."</p>
 <p>I've watched people with zero medical background land $80K–$100K+
 roles in under 60 days — not because they were special, but because they
-stopped guessing and followed a proven process.</p>
-<p>That's the entire point of Interview-to-Offer™: you stop guessing and
-start moving.</p>
-<p>If you're ready to start: <strong>→ <a href="[ENROLL]">Enroll
-here</a></strong> Still have a question first? <strong>→ <a
-href="[REBOOK]">Grab a time</a></strong></p>
-<p>— <strong>Ryan</strong></p>
-<hr />
-<h2 id="email-3--day-4">EMAIL 3 — Day 4</h2>
-<p><strong>Subject:</strong> Haley did this in 2 weeks
-<strong>Preview:</strong> Hired at Stryker. Two weeks and a day.</p>
-<p>{{contact.first_name}},</p>
-<p>Quick story.</p>
-<p>Haley came to us with <strong>no medical sales experience.</strong>
-She wasn't sure it would work for her either.</p>
+stopped guessing and followed the system.</p>
+<p>You've already done the hard part: you got on the call and built a
+plan. The next step is just deciding to run it.</p>
+<p><strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email A3</span><span class="eday">Day 4</span></div><div class="esubj">Haley did this in 2 weeks</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>Quick story. Haley came to us with no medical sales experience and
+wasn't sure it would work for her either.</p>
 <p>Two weeks and a day later, she had an offer from
-<strong>Stryker</strong> — one of the biggest names in the industry. Her
-words: <em>"I would not be here without you guys."</em></p>
-<p>That's not luck. It's what happens when you've got the exact playbook
-<em>and</em> a team in your corner who's done it.</p>
-<p>We keep our cohorts small — <strong>capped at 30</strong> — so
-everyone actually gets that level of support. Which means spots do fill
-up.</p>
-<p>Ready to be the next story? <strong>→ <a href="[ENROLL]">Enroll
-here</a></strong> Want to talk it through first? <strong>→ <a
-href="[REBOOK]">Grab a time</a></strong></p>
-<p>— <strong>Ryan</strong></p>
-<hr />
-<h2 id="email-4--day-7">EMAIL 4 — Day 7</h2>
-<p><strong>Subject:</strong> closing the loop <strong>Preview:</strong>
-Last one from me on this.</p>
-<p>{{contact.first_name}},</p>
-<p>I won't keep crowding your inbox, so this is the last note I'll send
-about getting started.</p>
-<p>Here's the honest truth I've seen play out hundreds of times: the
-people who break into medical sales aren't the most qualified — they're
-the ones who <strong>decide and move.</strong> Everyone else is still
-"thinking about it" a year later, in the exact same spot.</p>
-<p>If now's your time, I'd genuinely love to have you in: <strong>→ <a
-href="[ENROLL]">Enroll here</a></strong></p>
-<p>And if the timing just isn't right yet, no hard feelings at all — the
-door's open whenever you are. You can always grab a time and we'll talk:
-<strong>→ <a href="[REBOOK]">Grab a time</a></strong></p>
-<p>Rooting for you either way.</p>
-<p><strong>Ryan Conceicao</strong> Active Oncology Pharma Rep · Founder,
-HireLevel University</p>
-<hr />
-<h2 id="how-this-fits-the-full-email-system-3-buckets">How this fits the
-full email system (3 buckets)</h2>
-<table>
-<thead>
-<tr>
-<th>When</th>
-<th>Sequence</th>
-<th>Trigger</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>After registration</td>
-<td><strong>Post-reg nurture → book the call</strong></td>
-<td><code>webinar-registered</code>, exits on
-<code>call-booked</code></td>
-<td>✅ drafted (<code>email-sequence-v2-bookacall.md</code>)</td>
-</tr>
-<tr>
-<td>Booked → call</td>
-<td><strong>Show-up reminders</strong> (confirmation + 24h + 1h)</td>
-<td>booking created</td>
-<td>✅ live (calendar)</td>
-</tr>
-<tr>
-<td>After call, no purchase</td>
-<td><strong>This sequence (enroll / rebook)</strong></td>
-<td><code>call-booked</code> + time passed + NOT
-<code>purchased-*</code></td>
-<td>✅ drafted (this file)</td>
-</tr>
-<tr>
-<td>After purchase</td>
-<td><strong>Tier-aware welcome / onboarding</strong></td>
-<td><code>purchased-*</code></td>
-<td>✅ live</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Kill-switches keep it clean:</strong> book a call → the "book
-the call" emails stop. Buy → everything else stops and Welcome takes
-over.</p>
-</div></div></div><script src="review-nav.js?v=3" defer></script></body></html>
+<strong>Stryker</strong>. Her words: <em>"I would not be here without
+you guys."</em></p>
+<p>That's what happens with the right playbook and a team in your
+corner. We keep cohorts capped at <strong>30</strong> so everyone gets
+that level of support — and spots fill.</p>
+<p>Ready to be the next one?</p>
+<p><strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email A4</span><span class="eday">Day 7</span></div><div class="esubj">closing the loop</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>I won't keep crowding your inbox, so this is my last note about
+getting started.</p>
+<p>The people who break into medical sales aren't the most qualified —
+they're the ones who decide and move. You've already got the plan from
+our call. The only thing left is the decision.</p>
+<p>If now's your time, I'd love to have you in:</p>
+<p><strong>→ <a href="[ENROLL]">Get started here</a></strong></p>
+<p>And if the timing isn't right yet, no hard feelings — you've got my
+number. Rooting for you either way.</p>
+<p><strong>Ryan Conceicao</strong> · HireLevel Rep | 11-Year Oncology
+Rep</p></div></div><div class="egroup">③ After the call — they didn’t show up</div><p class="egd">No guilt — these get them to grab a new time.</p><div class="email"><div class="ehead"><span class="eno">Email B1</span><span class="eday">Day 0</span></div><div class="esubj">We missed you, {{contact.first_name}}</div><div class="ebody"><p>Hey {{contact.first_name}},</p>
+<p>Looks like we got crossed wires for your call today — no big deal, it
+happens to the best of us.</p>
+<p>I still want to help you map out your path into medical sales, so
+let's just find a new time:</p>
+<p><strong>→ <a href="[REBOOK]">Grab a new time</a></strong></p>
+<p>It's 30 minutes, it's free, and you'll walk away with a real plan —
+whether or not you ever work with me.</p>
+<p>Talk soon, <strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email B2</span><span class="eday">Day 1</span></div><div class="esubj">life happens — here&#x27;s the link</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>Quick follow-up in case yesterday got away from you.</p>
+<p>The call is genuinely the fastest way to figure out your next move.
+In 30 minutes we cover:</p>
+<ul>
+<li>Where you are now and the skills you already have that medical sales
+companies want</li>
+<li>The first moves to start landing interviews — even with no
+experience</li>
+<li>Whether Interview-to-Offer™ is the right fit (and if it's not, I'll
+tell you straight)</li>
+</ul>
+<p>No pitch, no pressure. Just grab whatever time works:</p>
+<p><strong>→ <a href="[REBOOK]">Grab a new time</a></strong></p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email B3</span><span class="eday">Day 3</span></div><div class="esubj">she almost didn&#x27;t get on the call either</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>Haley almost didn't make her call with me. She was busy, burnt out,
+not sure it'd be worth it.</p>
+<p>She showed up anyway. We had one conversation. Two weeks and a day
+later she had an offer from <strong>Stryker</strong>.</p>
+<p>I'm not going to tell you a 30-minute call changes your life. I'll
+tell you this: the people who show up and make a plan are the ones who
+actually break in. The ones who keep "getting to it later" are in the
+same spot a year from now.</p>
+<p>You picked a time once — let's get a new one on the books:</p>
+<p><strong>→ <a href="[REBOOK]">Grab a new time</a></strong></p>
+<p><strong>Ryan</strong></p></div></div><div class="email"><div class="ehead"><span class="eno">Email B4</span><span class="eday">Day 6</span></div><div class="esubj">last call to grab a time</div><div class="ebody"><p>{{contact.first_name}},</p>
+<p>I'll stop here so I'm not clogging your inbox.</p>
+<p>If breaking into medical sales is still on your list, the call is the
+best place to start — and the door's open whenever you're ready:</p>
+<p><strong>→ <a href="[REBOOK]">Grab a new time</a></strong></p>
+<p>And if the timing just isn't right, no worries at all. The training
+will be here when it is.</p>
+<p>Rooting for you, <strong>Ryan Conceicao</strong> · HireLevel Rep |
+11-Year Oncology Rep</p></div></div></div><script src="review-nav.js?v=3" defer></script></body></html>
