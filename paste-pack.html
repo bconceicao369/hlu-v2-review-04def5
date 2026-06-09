@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>V2 Go-Live — Workflow Paste Pack</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5f7fa;color:#1c2733;font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:28px 18px 90px}
+h1{font-size:24px;margin:0 0 4px;color:#0b1f3a}
+.sub{color:#5b6b7c;margin:0 0 20px;font-size:14px}
+h2{font-size:19px;color:#0b1f3a;margin:38px 0 4px;padding-top:22px;border-top:3px solid #0b1f3a}
+h2 .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;vertical-align:2px;margin-left:8px;padding:2px 8px;border-radius:99px}
+.tag.now{background:#eaf5ef;color:#1f7a4d;border:1px solid #bfe0cd}
+.tag.draft{background:#fdf3e3;color:#8a5a0a;border:1px solid #f0d9a8}
+.tag.opt{background:#eef1f6;color:#5b6b7c;border:1px solid #d8dfe9}
+h3{font-size:15px;margin:22px 0 6px;color:#13315c}
+.card{background:#fff;border:1px solid #e3e8ef;border-radius:10px;padding:14px 16px;margin:10px 0}
+.card.settings{border-left:4px solid #13315c}
+.card.warn{border-left:4px solid #c47f0e;background:#fffaf1}
+.steps{margin:6px 0 0;padding-left:20px}
+.steps li{margin:5px 0}
+.kv{font-size:14px;margin:3px 0}
+.kv b{color:#0b1f3a}
+.subjrow{display:flex;gap:10px;align-items:center;background:#eef1f6;border:1px solid #d8dfe9;border-radius:8px;padding:8px 12px;margin:10px 0 6px}
+.subjrow .lab{font-size:11px;font-weight:800;color:#5b6b7c;letter-spacing:.04em;flex-shrink:0}
+.subjrow .val{font-weight:600;font-size:14px;flex:1}
+pre{background:#0b1f3a;color:#e8eef7;border-radius:10px;padding:16px 18px;font:13.5px/1.65 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-wrap:break-word;margin:6px 0 0}
+.btn{background:#1f7a4d;color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:13px;font-weight:700;flex-shrink:0}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:#13315c}
+.emailhead{display:flex;justify-content:space-between;align-items:center;margin:26px 0 0}
+.emailhead h3{margin:0}
+.wait{display:inline-block;background:#fdf3e3;border:1px solid #f0d9a8;color:#8a5a0a;font-size:12px;font-weight:700;border-radius:99px;padding:3px 10px}
+.urls{background:#fff;border:1px solid #e3e8ef;border-radius:10px;padding:12px 16px;font-size:14px}
+.urls code{background:#eef1f6;padding:1px 6px;border-radius:5px;font-size:13px}
+ol.bigsteps{counter-reset:s;padding-left:0;list-style:none}
+ol.bigsteps>li{margin:8px 0;padding-left:34px;position:relative}
+ol.bigsteps>li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:#0b1f3a;color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.check{margin:4px 0}
+.foot{margin-top:40px;color:#8a98a8;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>V2 Go-Live — Workflow Paste Pack</h1>
+<p class="sub">Everything to build the 3 email sequences + helpers in GHL Automation. Work top to bottom. Every block has a Copy button.</p>
+
+<div class="card settings">
+<b>Build order (and publish state):</b>
+<ol class="bigsteps">
+<li><b>Nurture</b> — load 7 emails into the existing draft → <b>SAVE, leave in DRAFT</b> (publish at cutover)</li>
+<li><b>"Call Booked" helper</b> — new, 3 actions, no emails → <b>publish now</b></li>
+<li><b>Track A (Showed)</b> — new, 4 emails → <b>publish now</b></li>
+<li><b>Track B (No-Show)</b> — new, 4 emails → <b>publish now</b></li>
+<li><b>Purchase kill-switch</b> — add 2 actions to each of the 3 Tier payment workflows</li>
+<li><b>Reschedule line</b> — paste into the calendar's confirmation + reminder emails</li>
+<li><i>(Optional)</i> <b>Nudge Ryan</b> — reminds him to mark Showed / No-Show</li>
+</ol>
+</div>
+
+<div class="urls">
+<b>The only links used anywhere:</b><br>
+Watch page → <code>https://movetomedsales.com/webinar-watch-page</code><br>
+Book a call → <code>https://movetomedsales.com/coaching-application</code><br>
+Enroll (post-call) → <code>https://movetomedsales.com/sales-page</code><br>
+These resolve on the live domain after cutover — correct to paste now.
+</div>
+
+<h2>① Nurture — "Webinar Email Nurture Sequence" <span class="tag draft">BUILD NOW · KEEP DRAFT</span></h2>
+<div class="card settings">
+<div class="kv"><b>Where:</b> Automation → the existing draft "Webinar Email Nurture Sequence"</div>
+<div class="kv"><b>Trigger:</b> Contact Tag Added → tag is <code>webinar-registered</code></div>
+<div class="kv"><b>Steps:</b> Email 1 → Wait 1 day → Email 2 → Wait 1 day → Email 3 → Wait 1 day → Email 4 → Wait 2 days → Email 5 → Wait 2 days → Email 6 → Wait 3 days → Email 7</div>
+<div class="kv"><b>From:</b> Ryan Conceicao, same from-address as your existing emails</div>
+<div class="kv"><b>Stop-when-they-book:</b> handled by workflow ② — nothing to configure here</div>
+<div class="kv"><b>When done:</b> Save. <b>Do NOT publish yet</b> — it goes live with the domain flip.</div>
+</div>
+
+<div class="emailhead"><h3>Email 1</h3><span class="wait">Day 0 — immediately on trigger</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s1">✅ You're in, {{contact.first_name}} — here's your training</span><button class="btn ghost" onclick="cp('s1',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b1',this)">Copy body</button></div>
+<pre id="b1">Hey {{contact.first_name}},
+
+You're registered. Your free training is ready to watch right now:
+
+→ WATCH THE TRAINING: https://movetomedsales.com/webinar-watch-page
+
+In the next 60 minutes Ryan breaks down the exact system he's used to help people with zero medical sales experience land interviews — and offers — at companies like Stryker.
+
+Watch it start to finish. Take notes.
+
+And if you already know you're serious about making this move, you don't have to wait — you can book a free strategy call with Ryan and we'll map out your path together:
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Talk soon,
+Ryan Conceicao · HireLevel Rep · 11-Year Oncology Medical Sales Rep</pre>
+
+<div class="emailhead"><h3>Email 2</h3><span class="wait">Wait 1 day after Email 1</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s2">The question that changed everything for me</span><button class="btn ghost" onclick="cp('s2',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b2',this)">Copy body</button></div>
+<pre id="b2">Hey {{contact.first_name}},
+
+When I was 22 I asked myself one question: "If I'm not going to spend six figures on a degree… how do I find a career where I can earn six figures instead?"
+
+That led me to medical sales. Everyone told me it was impossible to break in without experience. I was a biology major working as a swim instructor — no sales background, no connections.
+
+I went on 100+ interviews in four months. Somewhere around interview 25, I noticed the questions never changed — only the person asking them did. That's when I built the system I now teach.
+
+I went from $53K to $185K base in six years.
+
+If you watched the training, you've seen the framework. The fastest way to apply it to *your* situation is to get on a quick call with me:
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+We'll figure out your starting point and your next move. No pressure.
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email 3</h3><span class="wait">Wait 1 day after Email 2</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s3">She quit her job Monday. Stryker interviews by Friday.</span><button class="btn ghost" onclick="cp('s3',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b3',this)">Copy body</button></div>
+<pre id="b3">Hey {{contact.first_name}},
+
+Haley reached out on a Monday — fresh out of college, in mortgage sales, burnt out. No medical sales experience.
+
+We had one call. I told her: "If you're serious, you have to commit — that's what hiring managers are looking for." Two hours later she called back. She'd quit her job. "This is what commitment looks like. I'm all in."
+
+By Wednesday, interviews were coming in. By Friday, she had multiple rounds with Stryker.
+
+What Haley had wasn't experience. It was a system — and a decision.
+
+That call we had is the same one I'm offering you. Free, 30 minutes, just you and me mapping out how to do what Haley did:
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email 4</h3><span class="wait">Wait 1 day after Email 3</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s4">"But I don't have sales experience…"</span><button class="btn ghost" onclick="cp('s4',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b4',this)">Copy body</button></div>
+<pre id="b4">Hey {{contact.first_name}},
+
+The #1 thing I hear: "This sounds great, but I have no sales experience. Will it work for me?"
+
+Yes — and here's why. Medical sales doesn't just want former salespeople. It wants people who can build trust with physicians, learn a product cold, and show up with professionalism. Nurses. Teachers. Recent grads. Customer service reps. Athletes. Those backgrounds translate perfectly — if you know how to frame them.
+
+That's the whole game: not faking experience you don't have, but leading with the experience you *do* have and making it undeniable.
+
+On our call I'll show you how to do that with *your* background specifically:
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Reply to this email if you've got a question first — I read every one.
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email 5</h3><span class="wait">Wait 2 days after Email 4</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s5">From dental hygienist to six-figure pharma rep</span><button class="btn ghost" onclick="cp('s5',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b5',this)">Copy body</button></div>
+<pre id="b5">Hey {{contact.first_name}},
+
+My sister Olivia was a dental hygienist. Great at her job — but the physical demands were breaking her body down, and she'd hit the ceiling of what she could earn.
+
+She used the exact framework I teach. Within a few months she landed her first medical sales role. Eight months after that, she moved into a pharma role making six figures.
+
+She didn't have a sales background either. She had a system and someone in her corner.
+
+That's what the strategy call is. 30 minutes, free. Here's what we'll cover:
+- Where you are now and the skills you already have that medical sales companies want
+- The first moves to start landing interviews
+- Whether Interview-to-Offer™ is the right fit to get you there (and if it's not, I'll tell you)
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email 6</h3><span class="wait">Wait 2 days after Email 5</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s6">The difference between the people who make it and the people who don't</span><button class="btn ghost" onclick="cp('s6',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b6',this)">Copy body</button></div>
+<pre id="b6">Hey {{contact.first_name}},
+
+After 11 years in this industry and helping a lot of people break in, I can tell you the difference between the ones who make it and the ones who don't.
+
+It's not their résumé. It's not their background. It's not luck.
+
+It's that at some point they stopped *thinking about it* and made a decision.
+
+The people still "thinking about it" a year from now will be in the exact same job, wondering what could've been. The people who book a call, get a plan, and execute are the ones who text me six months later from their new role with a company car in the driveway.
+
+You've watched the training. You know this is possible. The only thing between you and a plan is 30 minutes:
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email 7</h3><span class="wait">Wait 3 days after Email 6</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="s7">Last one — an honest question</span><button class="btn ghost" onclick="cp('s7',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('b7',this)">Copy body</button></div>
+<pre id="b7">Hey {{contact.first_name}},
+
+This is my last email about this.
+
+If you've watched the training and read these, you have enough to make a decision. So here's the honest question:
+
+Do you actually want to break into medical sales — or is this something you're just thinking about?
+
+If you're just thinking about it, that's okay. Come back when you're ready.
+
+But if you're serious — if you're tired of where you are and you watched that training thinking "this is it" — then the only thing standing between you and your first interview is a decision and a plan.
+
+I'll help you build the plan. It's free, it's 30 minutes, and after this email I'm going to stop following up on this round.
+
+→ Book your free strategy call: https://movetomedsales.com/coaching-application
+
+Whatever you decide — I genuinely hope you get there.
+
+Ryan Conceicao
+HireLevel Rep | 11-Year Oncology Rep | Interview-to-Offer™ Creator</pre>
+
+<h2>② Helper — "Call Booked — tag + stop nurture" <span class="tag now">NEW · PUBLISH NOW</span></h2>
+<div class="card settings">
+<div class="kv"><b>Create workflow → start from scratch.</b> No emails — 3 actions, 2 minutes.</div>
+<div class="kv"><b>Trigger:</b> Customer Booked Appointment → filter: Calendar is <code>Medical Sales Strategy Call</code></div>
+<div class="kv"><b>Action 1:</b> Add Contact Tag → <code>call-booked</code></div>
+<div class="kv"><b>Action 2:</b> Remove From Workflow → <code>Webinar Email Nurture Sequence</code></div>
+<div class="kv"><b>Action 3:</b> Remove From Workflow → <code>Post-Call — Track B (No-Show)</code> <i>(add this after you've created Track B in step ④ — come back here)</i></div>
+<div class="kv"><b>Why:</b> the instant someone books (or REbooks after a no-show), the "book a call" emails stop. This is the kill switch.</div>
+</div>
+
+<h2>③ Track A — "Post-Call — Track A (Showed)" <span class="tag now">NEW · PUBLISH NOW</span></h2>
+<div class="card settings">
+<div class="kv"><b>Create workflow → start from scratch.</b></div>
+<div class="kv"><b>Trigger:</b> Appointment Status → status is <code>Showed</code> → filter: Calendar is <code>Medical Sales Strategy Call</code></div>
+<div class="kv"><b>Step 1 — safety check:</b> If/Else → Contact Tag includes any of <code>purchased-core</code> / <code>purchased-resume</code> / <code>purchased-coaching</code> → YES branch: Remove From Workflow (this workflow). NO branch continues.</div>
+<div class="kv"><b>Then:</b> Wait 2 hours → Email A1 → Wait 2 days → Email A2 → Wait 2 days → Email A3 → Wait 3 days → Email A4</div>
+</div>
+
+<div class="emailhead"><h3>Email A1</h3><span class="wait">Wait 2 hours after trigger</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sa1">Great talking, {{contact.first_name}} — here's your next step</span><button class="btn ghost" onclick="cp('sa1',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('ba1',this)">Copy body</button></div>
+<pre id="ba1">Hey {{contact.first_name}},
+
+Really enjoyed our conversation today. Based on where you're at, you're in a great spot to make this move — and now you've got a real plan instead of guesswork.
+
+Whenever you're ready to get started, here's your link:
+
+→ Get started here: https://movetomedsales.com/sales-page
+
+Any last questions before you jump in? Just reply to this email — it comes straight to me.
+
+Talk soon,
+Ryan Conceicao · HireLevel Rep</pre>
+
+<div class="emailhead"><h3>Email A2</h3><span class="wait">Wait 2 days after A1</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sa2">the part everyone overthinks</span><button class="btn ghost" onclick="cp('sa2',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('ba2',this)">Copy body</button></div>
+<pre id="ba2">{{contact.first_name}},
+
+The #1 thing that keeps people out of medical sales isn't their resume or their experience. It's waiting until they feel "ready."
+
+I've watched people with zero medical background land $80K–$100K+ roles in under 60 days — not because they were special, but because they stopped guessing and followed the system.
+
+You've already done the hard part: you got on the call and built a plan. The next step is just deciding to run it.
+
+→ Get started here: https://movetomedsales.com/sales-page
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email A3</h3><span class="wait">Wait 2 days after A2</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sa3">Haley did this in 2 weeks</span><button class="btn ghost" onclick="cp('sa3',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('ba3',this)">Copy body</button></div>
+<pre id="ba3">{{contact.first_name}},
+
+Quick story. Haley came to us with no medical sales experience — she was in mortgage sales and burnt out, ready for a real change.
+
+She got on a call, committed, and two weeks and a day later she had an offer from Stryker. Her words: "I would not be here without you guys."
+
+That's what happens with the right playbook and a team in your corner. We keep cohorts capped at 30 so everyone gets that level of support — and spots fill.
+
+Ready to be the next one?
+
+→ Get started here: https://movetomedsales.com/sales-page
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email A4</h3><span class="wait">Wait 3 days after A3</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sa4">closing the loop</span><button class="btn ghost" onclick="cp('sa4',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('ba4',this)">Copy body</button></div>
+<pre id="ba4">{{contact.first_name}},
+
+I won't keep crowding your inbox, so this is my last note about getting started.
+
+The people who break into medical sales aren't the most qualified — they're the ones who decide and move. You've already got the plan from our call. The only thing left is the decision.
+
+If now's your time, I'd love to have you in:
+
+→ Get started here: https://movetomedsales.com/sales-page
+
+And if the timing isn't right yet, no hard feelings — you've got my number. Rooting for you either way.
+
+Ryan Conceicao · HireLevel Rep | 11-Year Oncology Rep</pre>
+
+<h2>④ Track B — "Post-Call — Track B (No-Show)" <span class="tag now">NEW · PUBLISH NOW</span></h2>
+<div class="card settings">
+<div class="kv"><b>Create workflow → start from scratch.</b></div>
+<div class="kv"><b>Trigger:</b> Appointment Status → status is <code>No Show</code> → filter: Calendar is <code>Medical Sales Strategy Call</code></div>
+<div class="kv"><b>Steps:</b> Email B1 (immediately) → Wait 1 day → Email B2 → Wait 2 days → Email B3 → Wait 3 days → Email B4</div>
+<div class="kv"><b>Exit on rebook:</b> handled by workflow ② Action 3 — go add it there now if you haven't.</div>
+</div>
+
+<div class="emailhead"><h3>Email B1</h3><span class="wait">Immediately on trigger</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sb1">We missed you, {{contact.first_name}}</span><button class="btn ghost" onclick="cp('sb1',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('bb1',this)">Copy body</button></div>
+<pre id="bb1">Hey {{contact.first_name}},
+
+Looks like we missed each other for your call today — no big deal, it happens.
+
+I still want to help you map out your path into medical sales, so let's just find a new time:
+
+→ Grab a new time: https://movetomedsales.com/coaching-application
+
+It's 30 minutes, it's free, and you'll walk away with a clear plan you can act on.
+
+Talk soon,
+Ryan</pre>
+
+<div class="emailhead"><h3>Email B2</h3><span class="wait">Wait 1 day after B1</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sb2">life happens — here's the link</span><button class="btn ghost" onclick="cp('sb2',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('bb2',this)">Copy body</button></div>
+<pre id="bb2">{{contact.first_name}},
+
+Quick follow-up in case yesterday got away from you.
+
+The call is genuinely the fastest way to figure out your next move. In 30 minutes we cover:
+
+- Where you are now and the skills you already have that medical sales companies want
+- The first moves to start landing interviews — even with no experience
+- Whether Interview-to-Offer™ is the right fit (and if it's not, I'll tell you straight)
+
+No pitch, no pressure. Just grab whatever time works:
+
+→ Grab a new time: https://movetomedsales.com/coaching-application
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email B3</h3><span class="wait">Wait 2 days after B2</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sb3">the people who show up are the ones who break in</span><button class="btn ghost" onclick="cp('sb3',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('bb3',this)">Copy body</button></div>
+<pre id="bb3">{{contact.first_name}},
+
+Here's the honest truth after 11 years in this: the people who break into medical sales aren't the most qualified — they're the ones who show up and make a plan.
+
+Haley did — she got on her call, committed, and two weeks and a day later she had an offer from Stryker.
+
+I'm not going to tell you a 30-minute call changes your life. But the people who get on it and make a plan are the ones who actually break in. The ones who keep putting it off are usually in the same place a year from now.
+
+You picked a time once — let's get a new one on the books:
+
+→ Grab a new time: https://movetomedsales.com/coaching-application
+
+Ryan</pre>
+
+<div class="emailhead"><h3>Email B4</h3><span class="wait">Wait 3 days after B3</span></div>
+<div class="subjrow"><span class="lab">SUBJECT</span><span class="val" id="sb4">last call to grab a time</span><button class="btn ghost" onclick="cp('sb4',this)">Copy</button></div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('bb4',this)">Copy body</button></div>
+<pre id="bb4">{{contact.first_name}},
+
+I'll stop here so I'm not clogging your inbox.
+
+If breaking into medical sales is still on your list, the call is the best place to start — and the door's open whenever you're ready:
+
+→ Grab a new time: https://movetomedsales.com/coaching-application
+
+And if the timing just isn't right, no worries at all. The training will be here when it is.
+
+Rooting for you,
+Ryan Conceicao · HireLevel Rep | 11-Year Oncology Rep</pre>
+
+<h2>⑤ Purchase kill-switch — 3 small edits <span class="tag now">EDIT EXISTING</span></h2>
+<div class="card warn">
+<div class="kv">Open each of these <b>existing published workflows</b> and add <b>2 actions at the END</b> (don't touch anything else):</div>
+<ol class="steps">
+<li><b>Tag: Tier 1 Payment Received</b> → add: Remove From Workflow → <code>Post-Call — Track A (Showed)</code>, then Remove From Workflow → <code>Post-Call — Track B (No-Show)</code></li>
+<li><b>Tag: Tier 2 Payment Received</b> → same 2 actions</li>
+<li><b>Tag: Tier 3 Payment Received</b> → same 2 actions</li>
+</ol>
+<div class="kv"><b>Why:</b> the moment anyone pays, every follow-up sequence stops instantly — no "buy now" emails to someone who already bought.</div>
+</div>
+
+<h2>⑥ Reschedule / cancel line <span class="tag now">CALENDAR SETTINGS</span></h2>
+<div class="card settings">
+<div class="kv"><b>Where:</b> Calendars → <code>Medical Sales Strategy Call</code> → Edit → <b>Notifications</b> → open the <b>Appointment Confirmation</b> email, paste the line below near the bottom, Save. Repeat for the <b>Reminder</b> email(s).</div>
+</div>
+<div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="cp('resched',this)">Copy line</button></div>
+<pre id="resched">Need to change your call time? You can reschedule or cancel anytime here: {{appointment_link}}</pre>
+
+<h2>⑦ Nudge Ryan — mark the call <span class="tag opt">OPTIONAL · 5 MIN</span></h2>
+<div class="card settings">
+<div class="kv"><b>Create workflow → start from scratch.</b> Name: <code>Nudge Ryan — mark the call</code></div>
+<div class="kv"><b>Trigger:</b> Customer Booked Appointment → filter: Calendar is <code>Medical Sales Strategy Call</code></div>
+<div class="kv"><b>Step 1:</b> Wait → Event/Appointment Time → <b>1 hour AFTER</b> the appointment</div>
+<div class="kv"><b>Step 2:</b> Internal Notification → to Ryan (email or in-app) → message: <i>"Mark {{contact.name}}'s call: Showed or No-Show (Calendars → Appointments). The follow-up emails won't fire until you do."</i></div>
+<div class="kv"><b>Note:</b> he'll get this even if he already marked it — small noise, guarantees nothing slips.</div>
+</div>
+
+<h2>✓ After the build — 5-minute sanity list</h2>
+<div class="card">
+<div class="check">☐ Nurture: 7 emails, waits = 1/1/1/2/2/3 days, trigger tag <code>webinar-registered</code>, status <b>DRAFT</b></div>
+<div class="check">☐ Helper ②: 3 actions (tag + remove from Nurture + remove from Track B), <b>published</b></div>
+<div class="check">☐ Track A: trigger Showed, purchase If/Else first, 2-hour wait before A1, <b>published</b></div>
+<div class="check">☐ Track B: trigger No Show, B1 immediate, <b>published</b></div>
+<div class="check">☐ All 3 Tier payment workflows end with the 2 Remove From Workflow actions</div>
+<div class="check">☐ Confirmation + reminder emails contain the {{appointment_link}} line</div>
+<div class="check">☐ Tell me when done → we run the end-to-end QA test, then flip the domain</div>
+</div>
+
+<p class="foot">HireLevel V2 go-live pack · June 2026 · private working doc (not linked from the review site)</p>
+</div>
+<script>
+function cp(id,btn){
+  var t=document.getElementById(id).textContent;
+  function ok(){var o=btn.textContent;btn.textContent='Copied ✓';setTimeout(function(){btn.textContent=o;},1600);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb();});}else{fb();}
+  function fb(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+}
+</script>
+</body>
+</html>
