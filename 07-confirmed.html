@@ -3,79 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>You&rsquo;re Booked | HireLevel University</title>
+<title>You're Booked | HireLevel University</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--purple:#68409D;--purple-dark:#452070;--bg-alt:#F7F4FB;--border:#E2D9F3;--text:#0D0B12;--muted:#6B6080}
 body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height:100vh;display:flex;flex-direction:column}
-.hero{flex:1;display:flex;flex-direction:column;align-items:center;padding:32px 24px 64px;text-align:center}
-.brandbar{display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.success-badge{width:76px;height:76px;background:var(--purple);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#fff;margin:18px auto 22px;box-shadow:0 8px 30px rgba(104,64,157,0.30)}
-.eyebrow{display:inline-block;background:rgba(104,64,157,0.08);border:1px solid rgba(104,64,157,0.25);color:var(--purple);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px}
-h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-0.5px;max-width:680px;margin:0 auto 16px;line-height:1.15}
+.hero{flex:1;width:100%;max-width:600px;margin:0 auto;padding:44px 24px 52px}
+.eyebrow{display:inline-block;background:rgba(104,64,157,0.08);border:1px solid rgba(104,64,157,0.25);color:var(--purple);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 15px;border-radius:100px;margin-bottom:16px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.6vw,2.5rem);font-weight:900;letter-spacing:-0.5px;margin-bottom:13px;line-height:1.14}
 h1 span{color:var(--purple);font-style:italic}
-.sub{font-size:1.05rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.6}
+.sub{font-size:1.02rem;color:var(--muted);line-height:1.6}
 .sub strong{color:var(--text)}
-.phone-callout{max-width:600px;margin:24px auto 0;padding:16px 22px;background:#F3EEF9;border:1px solid #DECEF0;border-radius:12px}
-.phone-callout p{margin:0;color:#452070;font-size:0.96rem;font-weight:600;line-height:1.5}
-.next-steps{width:100%;max-width:680px;margin:44px auto 0}
-.next-title{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple);margin-bottom:18px;text-align:left}
-.steps{display:flex;flex-direction:column;gap:12px}
-.step{display:flex;gap:16px;align-items:flex-start;background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:18px 20px;text-align:left}
-.step-ic{width:42px;height:42px;background:#fff;border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
-.step-content h4{font-size:0.95rem;font-weight:700;margin-bottom:5px}
-.step-content p{font-size:0.85rem;color:var(--muted);line-height:1.6}
-.step-content p strong{color:var(--text)}
-.prep{width:100%;max-width:680px;margin:28px auto 0;background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 26px;text-align:left;box-shadow:0 4px 24px rgba(104,64,157,0.06)}
-.prep h3{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:900;margin-bottom:16px}
-.prep ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.prep li{display:flex;gap:12px;align-items:flex-start;font-size:0.88rem;color:var(--muted);line-height:1.55}
-.prep .chk{color:var(--purple);font-weight:800;flex-shrink:0;font-size:1rem}
-.prep li strong{color:var(--text)}
-.ryan-note{width:100%;max-width:680px;margin:28px auto 0;background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px;text-align:left;display:flex;gap:20px;align-items:flex-start}
-.ryan-thumb{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;border:2px solid var(--border)}
-.ryan-note blockquote{font-size:0.9rem;color:var(--muted);line-height:1.7;font-style:italic;border-left:3px solid var(--purple);padding-left:14px;margin-bottom:12px}
-.ryan-sig-name{font-weight:700;font-size:0.88rem}
-.ryan-sig-sub{font-size:0.75rem;color:var(--muted)}
-footer{background:var(--bg-alt);border-top:1px solid var(--border);text-align:center;padding:24px;font-size:0.75rem;color:var(--muted)}
+.phone-callout{margin-top:18px;padding:14px 18px;background:#F3EEF9;border:1px solid #DECEF0;border-radius:12px}
+.phone-callout p{margin:0;color:#452070;font-size:0.94rem;font-weight:600;line-height:1.5}
+.prep{margin-top:34px;background:linear-gradient(180deg,#F7F4FB,#FFFFFF);border:1.5px solid var(--purple);border-radius:16px;padding:26px 28px;box-shadow:0 10px 34px rgba(104,64,157,0.12)}
+.prep h2{font-family:'Playfair Display',serif;font-size:1.32rem;font-weight:900;color:var(--purple-dark);margin-bottom:6px}
+.prep .lead{font-size:0.9rem;color:var(--muted);margin-bottom:18px;line-height:1.55}
+.prep ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.prep li{display:flex;gap:13px;align-items:flex-start;font-size:0.94rem;color:var(--text);line-height:1.55}
+.prep .chk{flex-shrink:0;width:23px;height:23px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;margin-top:1px}
+.next{margin-top:32px}
+.next-title{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.steps{list-style:none}
+.step{display:flex;gap:16px;align-items:flex-start;padding:15px 0;border-bottom:1px solid #F0ECF6}
+.step:last-child{border-bottom:none}
+.step .num{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--purple);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:0.92rem;font-weight:800}
+.step h4{font-size:0.95rem;font-weight:700;margin-bottom:3px}
+.step p{font-size:0.86rem;color:var(--muted);line-height:1.55}
+.step p strong{color:var(--text)}
+.ryan-note{margin-top:34px;background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start}
+.ryan-thumb{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;border:2px solid var(--border)}
+.ryan-note blockquote{font-size:0.9rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:10px}
+.ryan-sig-name{font-weight:700;font-size:0.86rem}
+.ryan-sig-sub{font-size:0.74rem;color:var(--muted)}
+footer{background:var(--bg-alt);border-top:1px solid var(--border);text-align:center;padding:22px;font-size:0.74rem;color:var(--muted)}
 footer a{color:var(--purple);text-decoration:none}
-@media(max-width:600px){.ryan-note{flex-direction:column}}
+@media(max-width:560px){.ryan-note{flex-direction:column}.hero{padding:34px 20px 46px}}
 </style>
 </head>
 <body>
 <section class="hero">
-  <div class="brandbar"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjYwIDAgMjgwIDMxMCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNoaWVsZEdyYWQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdCNEJCNSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxRTBBM0MiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxhdXJlbEdyYWQiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0M4QkRFMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5QThCQjUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwb2x5Z29uIHBvaW50cz0iMjAwLDE4IDIwMy44LDI5LjUgMjE1LjksMjkuNSAyMDYuMSwzNi41IDIwOS44LDQ4IDIwMCw0MSAxOTAuMiw0OCAxOTMuOSwzNi41IDE4NC4xLDI5LjUgMTk2LjIsMjkuNSIgZmlsbD0iIzhCNUNGNiIgb3BhY2l0eT0iMC45Ii8+CiAgPHBhdGggZD0iTTkwLDU1IFE5MCw1MiA5Myw1MiBMMzA3LDUyIFEzMTAsNTIgMzEwLDU1IEwzMTAsMjAwIFEzMTAsMjcwIDIwMCwzMTAgUTkwLDI3MCA5MCwyMDAgWiIgZmlsbD0iIzNEMUY2RiIgc3Ryb2tlPSIjMkQxMTUwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNOTcsNjIgUTk3LDU5IDEwMCw1OSBMMzAwLDU5IFEzMDMsNTkgMzAzLDYyIEwzMDMsMTk4IFEzMDMsMjYzIDIwMCwzMDAgUTk3LDI2MyA5NywxOTggWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzhCREUwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC41Ii8+CiAgPHBhdGggZD0iTTEwMCw2NSBRMTAwLDYyIDEwMyw2MiBMMjk3LDYyIFEzMDAsNjIgMzAwLDY1IEwzMDAsMTk4IFEzMDAsMjYwIDIwMCwyOTcgUTEwMCwyNjAgMTAwLDE5OCBaIiBmaWxsPSJ1cmwoI3NoaWVsZEdyYWQpIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNSIgcng9IjQyIiByeT0iMTAiIGZpbGw9IiNGMEVBRjgiIG9wYWNpdHk9IjAuOTUiLz4KICA8cmVjdCB4PSIxOTIiIHk9Ijk4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjRThFMEY0IiBvcGFjaXR5PSIwLjkiLz4KICA8bGluZSB4MT0iMjQyIiB5MT0iMTA1IiB4Mj0iMjQyIiB5Mj0iMTIyIiBzdHJva2U9IiNENEM4RTgiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGNpcmNsZSBjeD0iMjQyIiBjeT0iMTI0IiByPSIzIiBmaWxsPSIjQzhCREUwIi8+CiAgPGxpbmUgeDE9IjIwMCIgeTE9IjExOCIgeDI9IjIwMCIgeTI9IjIzMCIgc3Ryb2tlPSIjRThFMEY0IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0yMDAsMTMwIFExNzAsMTE4IDE0OCwxMjIgUTE2NSwxMjggMTcyLDEzOCBRMTg1LDEzMiAyMDAsMTMwWiIgZmlsbD0iI0Q0QzhFOCIgb3BhY2l0eT0iMC45Ii8+CiAgPHBhdGggZD0iTTIwMCwxMzAgUTIzMCwxMTggMjUyLDEyMiBRMjM1LDEyOCAyMjgsMTM4IFEyMTUsMTMyIDIwMCwxMzBaIiBmaWxsPSIjRDRDOEU4IiBvcGFjaXR5PSIwLjkiLz4KICA8cGF0aCBkPSJNMTk4LDE0NSBRMTgwLDE1NSAxODMsMTY4IFExODYsMTgwIDE5OCwxODIgUTE4MCwxOTAgMTgzLDIwNSBRMTg2LDIxOCAxOTgsMjIwIiBzdHJva2U9IiNENEM4RTgiIHN0cm9rZS13aWR0aD0iMi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMjAyLDE0NSBRMjIwLDE1NSAyMTcsMTY4IFEyMTQsMTgwIDIwMiwxODIgUTIyMCwxOTAgMjE3LDIwNSBRMjE0LDIxOCAyMDIsMjIwIiBzdHJva2U9IiNENEM4RTgiIHN0cm9rZS13aWR0aD0iMi41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNOTAsMjMwIFE3NSwyMTAgNzgsMTg1IFE4MiwxNjUgOTAsMTQ4IiBzdHJva2U9InVybCgjbGF1cmVsR3JhZCkiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPGVsbGlwc2UgY3g9Ijg1IiBjeT0iMjI4IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtMjAsODUsMjI4KSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMjEzIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAsODAsMjEzKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9Ijc3IiBjeT0iMTk3IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDAsNzcsMTk3KSIgZmlsbD0iI0M4QkRFMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9Ijc4IiBjeT0iMTgxIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNTAsNzgsMTgxKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjgyIiBjeT0iMTY2IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAsODIsMTY2KSIgZmlsbD0iI0M4QkRFMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9Ijg4IiBjeT0iMTUyIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNzAsODgsMTUyKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+CiAgPHBhdGggZD0iTTMxMCwyMzAgUTMyNSwyMTAgMzIyLDE4NSBRMzE4LDE2NSAzMTAsMTQ4IiBzdHJva2U9InVybCgjbGF1cmVsR3JhZCkiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPGVsbGlwc2UgY3g9IjMxNSIgY3k9IjIyOCIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMjAsMzE1LDIyOCkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMjAiIGN5PSIyMTMiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDMwLDMyMCwyMTMpIiBmaWxsPSIjQjhBOUQ0IiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzIzIiBjeT0iMTk3IiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg0MCwzMjMsMTk3KSIgZmlsbD0iI0M4QkRFMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjMyMiIgY3k9IjE4MSIgcng9IjEwIiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoNTAsMzIyLDE4MSkiIGZpbGw9IiNCOEE5RDQiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMTgiIGN5PSIxNjYiIHJ4PSIxMCIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwLDMxOCwxNjYpIiBmaWxsPSIjQzhCREUwIiBvcGFjaXR5PSIwLjgiLz4KICA8ZWxsaXBzZSBjeD0iMzEyIiBjeT0iMTUyIiByeD0iMTAiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MCwzMTIsMTUyKSIgZmlsbD0iI0I4QTlENCIgb3BhY2l0eT0iMC44Ii8+Cjwvc3ZnPg==" alt="HireLevel University" style="height:44px;width:auto;display:block" /></div>
-  <div class="success-badge">&#10003;</div>
-  <div class="eyebrow">You&rsquo;re Booked</div>
+  <div class="eyebrow">You're Booked</div>
   <h1>Your call with Ryan is <span>confirmed</span></h1>
-  <p class="sub">Nice &mdash; you&rsquo;re on the calendar. <strong>This is a phone call</strong>, and Ryan will call you at the exact time you picked.</p>
-  <div class="phone-callout"><p>&#128222; Keep your phone handy at your scheduled time &mdash; Ryan calls you. The number may show up as unknown or local, so be sure to pick up.</p></div>
-  <div class="next-steps">
-    <p class="next-title">&#9889; What Happens Next</p>
-    <div class="steps">
-      <div class="step"><div class="step-ic">&#128231;</div><div class="step-content"><h4>Check your email</h4><p>Your confirmation and call details are landing in your inbox right now. <strong>Add it to your calendar</strong> so it&rsquo;s locked in.</p></div></div>
-      <div class="step"><div class="step-ic">&#128276;</div><div class="step-content"><h4>We&rsquo;ll remind you</h4><p>You&rsquo;ll get a reminder <strong>24 hours before</strong> and again <strong>1 hour before</strong> &mdash; the time will never sneak up on you.</p></div></div>
-      <div class="step"><div class="step-ic">&#128222;</div><div class="step-content"><h4>Ryan calls you</h4><p>At your scheduled time, <strong>Ryan rings your phone</strong>. Be somewhere quiet where you can talk for a focused 30 minutes.</p></div></div>
-    </div>
-    <div class="prep">
-      <h3>How to get the most out of your call</h3>
-      <ul>
-        <li><span class="chk">&#10003;</span><span>Come ready to talk about <strong>where you&rsquo;re stuck right now</strong> &mdash; whether that&rsquo;s getting started, landing interviews, or turning interviews into offers.</span></li>
-        <li><span class="chk">&#10003;</span><span>Have your <strong>top one or two questions</strong> in mind. The more specific you are, the more Ryan can help.</span></li>
-        <li><span class="chk">&#10003;</span><span>Be somewhere <strong>quiet with good signal</strong>. This is a real strategy conversation &mdash; not a pitch &mdash; so give it your full attention.</span></li>
-      </ul>
-    </div>
-    <div class="ryan-note">
-      <img src="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/ae84f59c-5da1-40cd-b67c-a4020b320681.jpg" alt="Ryan Conceicao" class="ryan-thumb" />
-      <div>
-        <blockquote>&ldquo;Looking forward to talking. Come ready with where you&rsquo;re at and what you&rsquo;re stuck on, and I&rsquo;ll give you straight answers and a real, practical plan. Talk soon.&rdquo;</blockquote>
-        <div class="ryan-sig-name">&mdash; Ryan Conceicao</div>
-        <div class="ryan-sig-sub">Active Oncology Pharma Rep &middot; Founder, HireLevel University</div>
-      </div>
+  <p class="sub">Nice — you're on the calendar. <strong>This is a phone call</strong>, and Ryan will call you at the exact time you picked.</p>
+  <div class="phone-callout"><p>📞 Keep your phone handy at your scheduled time — Ryan calls you. The number may show up as unknown or local, so be sure to pick up.</p></div>
+
+  <div class="prep">
+    <h2>How to get the most out of your call</h2>
+    <p class="lead">Come ready and these 30 minutes can change your whole trajectory. Three things:</p>
+    <ul>
+      <li><span class="chk">✓</span><span>Know <strong>where you're stuck right now</strong> — whether that's getting started, landing interviews, or turning interviews into offers.</span></li>
+      <li><span class="chk">✓</span><span>Have your <strong>top one or two questions</strong> ready. The more specific you are, the more Ryan can help.</span></li>
+      <li><span class="chk">✓</span><span>Be somewhere <strong>quiet with good signal</strong> where you can talk for a focused 30 minutes.</span></li>
+    </ul>
+  </div>
+
+  <div class="next">
+    <p class="next-title">What happens next</p>
+    <ol class="steps">
+      <li class="step"><span class="num">1</span><div><h4>Check your email</h4><p>Your confirmation and call details are landing in your inbox now. <strong>Add it to your calendar</strong> so it's locked in.</p></div></li>
+      <li class="step"><span class="num">2</span><div><h4>We'll remind you</h4><p>A reminder goes out <strong>24 hours before</strong> and again <strong>1 hour before</strong> — the time won't sneak up on you.</p></div></li>
+      <li class="step"><span class="num">3</span><div><h4>Ryan calls you</h4><p>At your scheduled time, <strong>Ryan rings your phone</strong>. Just be ready to pick up.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="ryan-note">
+    <img src="https://assets.cdn.filesafe.space/rjvvbFpM4ph5xmkhKoDH/media/ae84f59c-5da1-40cd-b67c-a4020b320681.jpg" alt="Ryan Conceicao" class="ryan-thumb" />
+    <div>
+      <blockquote>"Looking forward to talking. Come ready with where you're at and what you're stuck on, and I'll give you straight answers and a real, practical plan. Talk soon."</blockquote>
+      <div class="ryan-sig-name">— Ryan Conceicao</div>
+      <div class="ryan-sig-sub">Active Oncology Pharma Rep · Founder, HireLevel University</div>
     </div>
   </div>
 </section>
-<footer>&copy; 2026 HireLevel University. All Rights Reserved. &middot; <a href="https://hireleveluniversity.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://hireleveluniversity.com/terms-of-service">Terms of Service</a></footer>
-<script src="review-nav.js?v=6" defer></script></body>
+<footer>© 2026 HireLevel University. All Rights Reserved. · <a href="https://hireleveluniversity.com/privacy-policy">Privacy Policy</a> · <a href="https://hireleveluniversity.com/terms-of-service">Terms of Service</a></footer>
+<script src="review-nav.js?v=6" defer></script>
+</body>
 </html>
