@@ -86,8 +86,7 @@
         var ta=panel.querySelector('#__rv_ta');var txt=(ta.value||'').trim();
         if(!txt){toast('Type some feedback first');return;}
         var btn=this;btn.disabled=true;btn.textContent='Sending…';
-        var to=String.fromCharCode(98,99,111,110,99,101,105,99,97,111,50,51,64,103,109,97,105,108,46,99,111,109);
-        fetch('https://formsubmit.co/ajax/'+to,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+        fetch('https://formsubmit.co/ajax/b1229b0d22c870633f959329769d228c',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
           body:JSON.stringify({_subject:'Coach feedback: '+lbl,Page:lbl,Reviewer:(nm.value||'(anonymous)'),Feedback:txt})})
           .then(function(r){return r.json();})
           .then(function(d){ta.value='';btn.disabled=false;btn.textContent='Send to Brandon →';toast('Sent to Brandon ✓ — thank you!');panel.style.display='none';})
